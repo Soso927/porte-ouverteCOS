@@ -1,0 +1,365 @@
+{
+    "count": 30,
+    "quizzes": [
+        {
+            "_id": "642438e068d7ea9aa952785b",
+            "question": "Qui est le compositeur du thème principal de Tetris, Korobeïniki ?",
+            "answer": "Nikolaï Nekrassov",
+            "badAnswers": [
+                "Piotr Tchaïkovski",
+                "Hirokazu Tanaka",
+                "Alexandre Nikolaïevitch Skriabin"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952785e",
+            "question": "Dans la version originale de 'Street Fighter II: The world Warrior', combien y a-t-il de personnages jouables ?",
+            "answer": "8",
+            "badAnswers": [
+                "12",
+                "10",
+                "6"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "6532650ae4123c9a1476ba79",
+            "question": "Quel docteur en informatique a publié le whitepaper de Polkadot ?",
+            "answer": "Gavin Wood",
+            "badAnswers": [
+                "Charlie Lee",
+                "Sunny King",
+                "Roger Ver"
+            ],
+            "category": "actu_politique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527853",
+            "question": "Qui est le premier interprète du Doctor Who ?",
+            "answer": "William Hartnell",
+            "badAnswers": [
+                "Richard Hurndall",
+                "David Bradley",
+                "Matt Smith"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "65030b4ce4123c9a1476aae5",
+            "question": "Qui apelle t-on 'mon gourmand' ?",
+            "answer": "Bebou",
+            "badAnswers": [
+                "Victor Hugo",
+                "Bernard Werber",
+                "Amélie Nothomb"
+            ],
+            "category": "art_litterature",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "653264dee4123c9a1476ba77",
+            "question": "Quel titre d''Hybrid Theory' Linkin Park ont-ils repris en acoustique pour la tournée One More Light ?",
+            "answer": "Crawling",
+            "badAnswers": [
+                "Papercut",
+                "One Step Closer",
+                "A place for My Head"
+            ],
+            "category": "musique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "666c0884ab1f9aa811c995ce",
+            "question": "Quel phénomène astronomique est décrit par la relativité générale comme une courbure de l'espace-temps causée par une masse ?",
+            "answer": "Lentille gravitationnelle",
+            "badAnswers": [
+                " Gravité quantique",
+                " Trou noir",
+                "Trou de ver"
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952785f",
+            "question": "Quel est le premier jeu à avoir dépassé le million d'exemplaires vendus sur Playstation ?",
+            "answer": "Tekken",
+            "badAnswers": [
+                "Tomb Raider",
+                "Final Fantasy VII",
+                "Doom"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527858",
+            "question": "Qui est le créateur du personnage Mario de Nintendo ?",
+            "answer": "Shigeru Miyamoto",
+            "badAnswers": [
+                "Fusajirō Yamauchi",
+                "Shuntaro Furukawa",
+                "Hayao Miyazaki"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952784f",
+            "question": "Qui a composé la musique du film le grand Bleu ?",
+            "answer": "Eric Serra",
+            "badAnswers": [
+                "Vladimir Cosma",
+                "Alexandre Desplat",
+                "Ennio Morricone"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "684835ad6350b1adf928b26d",
+            "question": "En quelle année a été édité pour la première fois le jeu de société \"Carcassonne\", créé par Klaus-Jürgen Wrede ?",
+            "answer": "2000",
+            "badAnswers": [
+                "1999",
+                "2001",
+                "2002"
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "65326751e4123c9a1476ba93",
+            "question": "Dans quel album de Mike Oldfied un des titres est consacré au mont Saint-Michel ?",
+            "answer": "Voyager",
+            "badAnswers": [
+                "Amarok",
+                "Discovery",
+                "Crises"
+            ],
+            "category": "musique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527867",
+            "question": "Quel était l'instrument de prédilection de Louis Armstrong ?",
+            "answer": "La Trompette",
+            "badAnswers": [
+                "La guitare",
+                "La contre-basse",
+                "La clarinette"
+            ],
+            "category": "musique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "666f1da6ab1f9aa811c99bd6",
+            "question": "Qui a été surnommé l entraineur le plus nul du football français depuis Louis XVI?",
+            "answer": "Raymond Domenech",
+            "badAnswers": [
+                "Paul Le Guen",
+                "Pascal Dupraz",
+                "Jocelyn Gourvennec"
+            ],
+            "category": "sport",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527842",
+            "question": "Jean-Michel Basquiat est décédé à quel âge ?",
+            "answer": "27 ans",
+            "badAnswers": [
+                "19 ans",
+                "33 ans",
+                "39 ans"
+            ],
+            "category": "art_litterature",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952786f",
+            "question": "Comment appelle-t-on le fruit du plaqueminier ?",
+            "answer": "Kaki",
+            "badAnswers": [
+                "Kakou",
+                "Kacha",
+                "Kali"
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527865",
+            "question": "Quel est le nom du premier album des Black Eyed Peas ?",
+            "answer": "Behind the Front",
+            "badAnswers": [
+                "Bridging the Gap",
+                "Elephunk",
+                "Monkey Business"
+            ],
+            "category": "musique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527859",
+            "question": "Quel acteur joue le rôle de Hubert Bonisseur de la Bath dans le film 'OSS 117: Le Caire, nid d'espions' ?",
+            "answer": "Jean Dujardin",
+            "badAnswers": [
+                "Christian Clavier",
+                "Guillaume Canet",
+                "Neil Patrick Harris"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "66057752ab1f9aa811c94cf5",
+            "question": "Qui a inscrit le 3ème but du tfc lors de la victoire contre Liverpool?",
+            "answer": "Frank Magri",
+            "badAnswers": [
+                "Thijs Dallinga",
+                "Aron Donnum",
+                "Yann Gboho"
+            ],
+            "category": "sport",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952784a",
+            "question": "Quel symbole récompense le meilleur film au festival de Berlin ?",
+            "answer": "Ours d'or",
+            "badAnswers": [
+                "Léopard d'or",
+                "Pyramide d'or",
+                "Lion d'or"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527874",
+            "question": "A quel groupe musical international doit-on la bande originale du film 'Flash Gordon ?",
+            "answer": "Queen",
+            "badAnswers": [
+                "Yes",
+                "Led Zeppelin",
+                "The Doors"
+            ],
+            "category": "musique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "6515fe1fe4123c9a1476afcf",
+            "question": "Quel jour signe le début de l’invasion de l’Ukraine par la Russie ?",
+            "answer": "24 février 2022",
+            "badAnswers": [
+                "2 mars 2022",
+                "12 février 2022",
+                "6 mars 2022"
+            ],
+            "category": "actu_politique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527879",
+            "question": "Comment appelle-t-on le versant de la montagne non situé au soleil ?",
+            "answer": "Ubac",
+            "badAnswers": [
+                "Adret",
+                "Etant",
+                "Ressac"
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527857",
+            "question": "Lequel de ses personnages n'est pas disponible dans le jeu Street of Rage ?",
+            "answer": "Rick Thunder",
+            "badAnswers": [
+                "Adam Hunter",
+                "Axel Stone",
+                "Blaze Fielding"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952786c",
+            "question": "Calvin Cordozar Broadus, Jr. est le véritable nom de quel rappeur Américain ?",
+            "answer": "Snoop Dogg",
+            "badAnswers": [
+                "Dr. DRE",
+                "Coolio",
+                "2Pac"
+            ],
+            "category": "musique",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952786e",
+            "question": "Quel titre de noblesse est immédiatement inférieur à celui de comte ?",
+            "answer": "Vicomte",
+            "badAnswers": [
+                "Archiduc",
+                "Duc",
+                "Marquis"
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "662ef916ab1f9aa811c96a92",
+            "question": "Quelle est la civilisation qui a inventé le code d'amourabi",
+            "answer": "Babylone",
+            "badAnswers": [
+                "Rome",
+                "Grèce ",
+                "Egypte "
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952783e",
+            "question": "Trois études pour un autoportrait est un tableau de ...",
+            "answer": "Francis Bacon",
+            "badAnswers": [
+                "Pablo Picasso",
+                "Salvador Dali",
+                "René Magritte"
+            ],
+            "category": "art_litterature",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "653265dee4123c9a1476ba83",
+            "question": "Dans quel pays les femmes portent-elles encore des mantilles ?",
+            "answer": "Espagne",
+            "badAnswers": [
+                "Grèce",
+                "Maroc",
+                "Algérie"
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527887",
+            "question": "Quelle capitale actuelle était appelée 'Philadelphia' du temps des Romains ?",
+            "answer": "Amman",
+            "badAnswers": [
+                "Téhéran",
+                "Damas",
+                "Bagdad"
+            ],
+            "category": "culture_generale",
+            "difficulty": "difficile"
+        }
+    ]
+}
