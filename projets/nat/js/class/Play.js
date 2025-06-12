@@ -268,7 +268,7 @@ export class Play {
             // Callback cf Quizz
             this.quizz.makeHTMLQuestionAndAnswers(quest, niveau, [shuffledAnswers], cat, this.#goodAnswer, this.#handleAnswer);
             // Suppression de la question qui vient d'être posée dans le tableau
-            x
+            this.serieOfQuestions.splice(rang, 1);
         }
     }
 
