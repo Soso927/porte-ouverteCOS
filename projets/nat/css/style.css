@@ -1,0 +1,500 @@
+:root {
+  /* COLORS */
+  --color-gris: rgb(77, 77, 77);
+  --color-vert: rgb(101, 162, 33);
+  --color-jaune: rgb(231, 190, 56);
+  --color-orange: rgb(203, 121, 53);
+  --color-bleu: rgb(42, 95, 157);
+  --color-texte: bisque;
+}
+
+.underdog-regular {
+  font-family: "Underdog", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --------------------- */
+/*     RESET ESPACE      */
+/* --------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Underdog", system-ui;
+}
+
+img {
+  display: block;
+}
+
+/* --------------------- */
+/*     COMMUNS           */
+/* --------------------- */
+body {
+  background-color: var(--color-gris);
+  color: var(--color-texte);
+  overflow: hidden;
+  /* font-size: var(--font-size-fluid); */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 90px;
+  background: var(--color-gris);
+  text-align: center;
+  align-items: center;
+  line-height: var(--line-height-title);
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+#sectionPlateau {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#userInterface {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------- */
+/* Section 1 - User      */
+/* --------------------- */
+#choixUser,
+#zoneQuestion {
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 4%;
+}
+
+.niveaux {
+  display: flex;
+  margin: 10% auto;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  text-transform: capitalize;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+input {
+  appearance: none;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+
+input:hover {
+  background: var(--color-jaune);
+}
+
+input:checked {
+  background: var(--color-orange);
+}
+
+input:checked::before {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  /* content: '\f00c'; */
+  content: "✔️";
+  font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  /* font-family: 'Font Awesome 5 Free'; */
+}
+
+input:checked::after {
+  animation: click-wave 0.65s;
+  background: var(--color-orange);
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+input {
+  border-radius: 50%;
+}
+
+input::after {
+  border-radius: 50%;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 20px;
+    width: 20px;
+    opacity: 0.35;
+    position: relative;
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+/* fin boutons radios */
+
+/* Bouton de lancement du jeu */
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  background-color: var(--color-gris);
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px var(--color-gris), 5px 5px 15px #222, inset 5px 5px 10px var(--color-gris), inset -5px -5px 10px #222;
+  color: var(--color-texte);
+}
+
+button:hover {
+  box-shadow: -5px -5px 15px var(--color-gris), 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px var(--color-gris);
+  transition: 500ms;
+  color: var(--color-orange);
+  text-shadow: 0px 0px 10px var(--color-orange);
+}
+
+button:focus {
+  outline: none;
+}
+
+.boutonsAgainInit {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.suivant > svg:hover,
+.init > svg:hover {
+  fill: var(--color-orange);
+}
+
+
+/* --------------------- */
+/*          Dé           */
+/* --------------------- */
+.containerDice {
+  box-sizing: border-box;
+  align-self: center;
+}
+
+/* --------------------- */
+/*    Questions          */
+/* --------------------- */
+h2,
+#question {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.texteQuestion {
+  color: beige;
+
+}
+
+.rappelChoix {
+  font-weight: bold;
+  color: wheat;
+}
+
+/* --------------------- */
+/* Propositions réponses */
+/* --------------------- */
+.answers {
+  display: block;
+  width: 70%;
+  margin: 12px auto;
+  padding: 2%;
+  height: fit-content;
+  background-color: #222224;
+  border-radius: 5px;
+  color: var(--color-texte);
+  border: 2px solid var(--color-orange);
+  border-radius: 5px;
+  padding: 18px 36px;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 var(--color-orange);
+  transition: ease-out 0.4s;
+}
+
+.answers:hover {
+  background-color: #414144;
+  border: #FFFFFF solid 1px;
+  font-weight: bold;
+  box-shadow: inset 0 0 0 50px var(--color-orange);
+  color: var(--color-texte);
+}
+
+.answers:disabled,
+.answers[disabled] {
+  border: 1px solid #211f1f;
+  color: var(--color-texte);
+  box-shadow: inset 0 0 0 50px transparent;
+}
+
+.choixVrai {
+  background: var(--color-vert);
+  font-weight: bold;
+}
+
+.choixFaux {
+  background: var(--color-orange);
+  font-weight: bold;
+}
+
+.choixVrai:hover {
+  background: var(--color-vert);
+}
+
+.choixFaux:hover {
+  background: var(--color-orange);
+}
+
+/* --------------------- */
+/* Section 2  plateau    */
+/* --------------------- */
+
+#divPlateau {
+  width: 35vw;
+  height: auto;
+
+  object {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.score {
+  margin-top: 4%;
+}
+
+/* --------------------- */
+/*        POPUP          */
+/* --------------------- */
+.open-btn {
+  background-color: #211f1f;
+  border-radius: 50%;
+}
+
+.open-rules {
+  cursor: pointer;
+}
+
+.fa-circle-info:hover,
+.fa-house:hover {
+  transition: 0.35s;
+  color: #989295;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba(122, 122, 122, 0.3);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.popup-content {
+  display: flex;
+  background-color: #ebeff3;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: 80%;
+  border-radius: 50px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transform: scaleY(0);
+  opacity: 0;
+  animation: apparPop 0.3s ease-in forwards;
+}
+
+@keyframes apparPop {
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.button-close-gameOver,
+.button-close-rules {
+  position: absolute;
+  color: #4d4e53;
+  cursor: pointer;
+  top: 30px;
+  right: 30px;
+  transition: 0.35s;
+}
+
+.top {
+  text-align: center;
+  color: black;
+}
+
+.button-close-gameOver:hover,
+.button-close-rules:hover {
+  transition: 0.35s;
+  color: #989295;
+}
+
+#rules {
+  font-size: x-small;
+}
+
+.packages {
+  display: flex;
+  margin: 20px;
+  margin-top: 0;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  gap: 20px;
+  color: #211f1f;
+
+  h1 {
+    margin-bottom: 4%;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  span {
+    color: var(--color-orange);
+    font-weight: bold;
+
+    i {
+      margin-left: 4px;
+    }
+  }
+}
+
+/* --------------------- */
+/*     Medias queries    */
+/* --------------------- */
+/* Tablettes (<= 1024px) */
+@media (max-width: 1024px) {
+  body {
+    overflow-y:scroll;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  #divPlateau {
+    width: 50vw;
+  }
+
+  h2,
+  #question {
+    margin: 10px auto;
+  }
+
+  .texteQuestion {
+    margin: 0 4%;
+  }
+
+  #zoneQuestion {
+    margin-top: 10%;
+  }
+
+  .answers {
+    width: 100%;
+  }
+
+  button {
+    height: 70px;
+  }
+
+  #sectionPlateau {
+    flex: 0 1 auto;
+  }
+
+  #userInterface {
+    flex: 2 1 auto;
+  }
+
+  #proposition {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 4px;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .answers:hover {
+    font-weight: normal;
+  }
+}

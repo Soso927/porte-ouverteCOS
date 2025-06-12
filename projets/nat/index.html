@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dice.css">
+    <script src="./js/lodash/lodash.min.js"></script>
+    <script type="module" src="./js/popup.js" defer></script>
+    <script type="module" src="./js/app.js"></script>
+    <title>Quizz</title>
+</head>
+
+<body>
+    <header id="titre">
+        <!-- Lien vers homepage -->
+        <a class="go-home" href="../../index.html">
+            <svg width="30px" height="30px" fill="bisque" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+        </a>
+        <h1 class="titre">Quizz</h1>
+        <!-- Ouverture popup -->
+        <svg class="open-rules"  width="30px" height="30px" fill="bisque"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+    </header>
+    <main class="container">
+        <section id="userInterface">
+            <div id="choixUser">
+                <h1 class="titreNiveau">Choissisez le niveau des questions</h1>
+                <!-- générer en JS (btn radio) -->
+                <button id="go" class="noselect">Jouer</button>
+            </div>
+            <!-- Dé -->
+            <div class="containerDice hidden">
+                <div class="newDice">
+                    <div class="cube">
+                        <div class="front">
+                            <span class="dot dot1"></span>
+                        </div>
+                        <div class="back">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                        </div>
+                        <div class="right">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                        </div>
+                        <div class="left">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                            <span class="dot dot4"></span>
+                        </div>
+                        <div class="top">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                            <span class="dot dot4"></span>
+                            <span class="dot dot5"></span>
+                        </div>
+                        <div class="bottom">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                            <span class="dot dot4"></span>
+                            <span class="dot dot5"></span>
+                            <span class="dot dot6"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="zoneQuestion" class="hidden">
+                <div>
+                    <h3>Question : <br><br><span class="texteQuestion"></span></h3>
+                    <br>
+                    <p class="rappelChoix">
+                        (Catégorie : 
+                        <span class="categorie"></span> - Niveau : <span class="niveau"></span>)
+                        </p>
+                    
+                    <h2 class="">Sélectionner votre réponse :</h2>
+                    <div id="proposition">
+                        <!-- générer en JS (Question et réponse) -->
+                    </div>
+                </div>
+            </div>
+            <!-- Boutons -->
+            <div class="boutonsAgainInit">
+                <button class="suivant noselect hidden">
+                    <svg width="20px" height="20px" fill="bisque"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416L0 96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241l0-145c0-17.7 14.3-32 32-32s32 14.3 32 32l0 320c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-145-11.5 9.6-192 160z"/></svg>
+                </button>
+            </div>
+        </section>
+        <section id="sectionPlateau">
+            <div id="divPlateau">
+                <!-- Svg avec le plateau de jeu charger en JS -->
+            </div>
+            <div id="score hidden">
+                <h2 class="score hidden">Score : <span id="nbBonneReposne"></span> / <span id="NbTotalQuestion"></span>
+                </h2>
+                <button class="init noselect hidden">
+                    <svg width="20px" height="20px" fill="bisque" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160 352 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l111.5 0c0 0 0 0 0 0l.4 0c17.7 0 32-14.3 32-32l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1L16 432c0 17.7 14.3 32 32 32s32-14.3 32-32l0-35.1 17.6 17.5c0 0 0 0 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.8c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352l34.4 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L48.4 288c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ***** -->
+    <!-- POPUP -->
+    <!-- ***** -->
+    <div class="popup-overlay">
+        <!-- Regle du jeu -->
+        <div id="rules" class="popup-content">
+            <div class="button-close-rules fillIn">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="containerPopup">
+                <div class="top">
+                    <div class="packages">
+                        <h1>Règle du jeu</h1>
+                        <h2>Quizz à 3 niveaux de difficultées :</h2>
+                        <p>Facile, normal ou Difficile</p>
+                        <h2>Thèmes possible pour chaque question :</h2>
+                        <p>
+                            TV & Cinéma, Art & Littérature, Musique, Actualité politique,
+                            Culture générale, Sport ou Jeux videos
+                        </p>
+                        <h2>À chaque tour :</h2>
+                        <ul>
+                            <li>Le dé est lancé automaiquement.</li>
+                            <li>Si la réponse à la question est correct le pion avance du nombre indiqué par le dé.</li>
+                            <li>Pour passer à la question suivante, appuyez sur le bouton
+                                <span>
+                                    <i class="fa fa-step-forward fa-lg"></i>
+                                </span>
+                            </li>
+                        </ul>
+                        <h2>Cases spéciales :</h2>
+                        <ul>
+                            <li><span>Case 5</span> → Avance directement à la case <span>14</span>.</li>
+                            <li><span>Case 24</span> → Avance directement à la case <span>29</span>.</li>
+                            <li><span>Case 37</span> → Recule à la case <span>18</span>.</li>
+                            <li><span>Case 42</span> → Avance à la case <span>39</span>.</li>
+                        </ul>
+                        <h2>Règles de déplacement :</h2>
+                        <ul>
+                            <li>Votre pion avance en fonction du nombre indiqué sur le dé.</li>
+                            <li><span>Si le résultat dépasse la case 46, il doit reculer de la différence.</span></li>
+                        </ul>
+                        <h2>Fin du jeu :</h2>
+                        <p>Le jeu se termine quand le joueur atteint <span>exactement</span> la case 46.</p>
+                        <p>Il faut faire très attention au dernier déplacement pour ne pas dépasser !</p>
+                        <p>Pour lancer une nouvelle partie appuyez sur le bouton
+                            <span>
+                                <i class="fa fa-refresh fa-lg"></i>
+                            </span>
+                        </p>
+                        <h2>
+                            <span>
+                                <i class="fa-solid fa-triangle-exclamation fa-xl"></i>
+                            </span>
+                        </h2>
+                        <p>Certains niveaux ont un nombre restreint de questions.</p>
+                        <p> Si vous n'avez pas atteint l'arrivée avant la fin de la liste de question, vous serez Game Over</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin Regle du jeu -->
+        <!-- Game over -->
+        <div id="gameOver" class="popup-content" style="background: rgba(122, 122, 122, 0.7);">
+            <div class="containerPopup">
+                <div class="top">
+                    <div class="packages">
+                        <img width="600px" src="./assets/images/game-over.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Game over -->
+    </div> <!-- Fin  div popup-overlay-->
+</body>
+
+</html>
+
+<!-- <body>
+    <header>
+        <h1>titre</h1>
+    </header>
+    <main class="container">
+        <section class="userInterface">
+            <div id="choixUser"></div>
+            <div class="containerDice"></div>
+            <div id="zoneQuestion"></div>
+            <div class="boutonsAgainInit"></div>
+        </section>
+        <section class="sectionPlateau">
+            <div id="divPlateau">
+                <object data="" type="svg"></object>
+            </div>
+            <div id="score"></div>
+        </section>
+    </main>
+</body> -->

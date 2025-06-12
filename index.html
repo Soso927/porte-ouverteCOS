@@ -5,27 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet DWWM5</title>
+    <!-- CSS -->
     <link rel="icon" type="image/x-icon" href="./assets/medias/favicon.ico">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js" defer></script>
-
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- JS et jQuery -->
+    <script type="module" src="./js/app.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Mettre carrousel.js après jquery sinon ça plante -->
+    <script src="./js/carrousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 
-<body onload="afficherDateAccueil(), afficherDate()">
+<body>
     <div class="overlay"></div>
 
     <section class="content">
@@ -69,7 +68,7 @@
 Chaque bonne réponse permet d’avancer son pion du nombre de case (entre 1 et 6) tiré aléatoirement."
                         data-image="assets/medias/quizz-capture-ecran.png"
                         data-image2="assets/medias/quizz-capture-ecran2.png">
-                        <a href="quizz.html">
+                        <a href="./projets/nat/index.html">
                             <img src="assets/medias/quizz-logo.png">
                         </a>
                     </div>
@@ -117,8 +116,6 @@ Chaque bonne réponse permet d’avancer son pion du nombre de case (entre 1 et 
                             <img src="">
                         </a>
                     </div>
-
-
                 </div>
 
                 <div class="info" id="infoBox">
@@ -183,9 +180,7 @@ Chaque bonne réponse permet d’avancer son pion du nombre de case (entre 1 et 
                     </div>
                 </div>
             </div>
-
         </div>
-
 
         <section class="content-navbar">
             <div class="navbar">
@@ -393,137 +388,6 @@ Chaque bonne réponse permet d’avancer son pion du nombre de case (entre 1 et 
             </div>
         </div>
     </div>
-
-
-    <script>
-
-        function updateClock() {
-            const clockElement = document.getElementById('clock');
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const currentTime = `${hours}:${minutes}`;
-            clockElement.textContent = currentTime;
-        }
-
-        setInterval(updateClock, 1000);
-        updateClock();
-
-
-        /**************************** date ****************************/
-
-        function afficherDateAccueil() {
-            const joursSemaine = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-            const moisAnnee = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
-            const aujourdHui = new Date();
-            const jourSemaine = joursSemaine[aujourdHui.getDay()];
-            const jour = aujourdHui.getDate();
-            const mois = moisAnnee[aujourdHui.getMonth()];
-            const jourFormate = jour < 10 ? '0' + jour : jour;
-            const dateTexte = `${jourSemaine} ${jourFormate} ${mois}`;
-            document.getElementById("date").innerText = dateTexte;
-        }
-
-    </script>
-
-
-    <script>
-        var openBtn = document.querySelector(".open-btn");
-        var overlay = document.querySelector(".popup-overlay");
-        var closeBtn = document.querySelector(".fillIn");
-
-        openBtn.addEventListener("click", function () {
-            overlay.style.display = "flex";
-            document.body.classList.add("no-scroll");
-        });
-
-        overlay.addEventListener("click", (event) => {
-            if (event.target === overlay) {
-                overlay.style.display = "none";
-                document.body.classList.remove("no-scroll");
-            }
-        });
-
-        closeBtn.addEventListener("click", function () {
-            overlay.style.display = "none";
-            document.body.classList.remove("no-scroll");
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            const $carousel = $("#customCarousel");
-            const $infoBox = $("#infoBox");
-
-            function updateInfo(event) {
-                const $firstVisible = $carousel.find('.owl-item.active .item').first();
-
-                $infoBox.addClass('animAppar');
-
-                setTimeout(() => {
-
-                    const nom = $firstVisible.data('nom');
-                    const score1 = $firstVisible.data('score1');
-                    const score2 = $firstVisible.data('score2');
-                    const score3 = $firstVisible.data('score3');
-                    const description = $firstVisible.data('description');
-                    const image1 = $firstVisible.data('image');
-                    const image2 = $firstVisible.data('image2');
-                    const devtag = $firstVisible.data('devtag');
-                    const href = $firstVisible.data('href');
-
-                    $("#infoName").text(nom);
-                    $("#infoScore1").text(score1);
-                    $("#infoScore2").text(score2);
-                    $("#infoScore3").text(score3);
-                    $("#infoDesc").text(description);
-                    $("#infoImg1").attr('src', image1);
-                    $("#infoImg2").attr('src', image2);
-                    $("#infoDev").text(devtag);
-                    $("#infoBtnPlay").data('href', href);
-
-                    $infoBox.removeClass('animAppar');
-                }, 400);
-            }
-
-            $('.owl-carousel').on('click', '.btn-play', function () {
-                const item = $(this).closest('.item');
-                const link = item.data('href');
-                if (link) {
-                    window.location.href = link;
-                }
-            });
-
-            $('#infoBtnPlay').on('click', function () {
-                const link = $(this).data('href');
-                if (link) {
-                    window.location.href = link;
-                }
-            });
-
-            $('#btnQuitter').on('click', function () {
-                $('#customCarousel').trigger('next.owl.carousel');
-            });
-
-            $carousel.owlCarousel({
-                items: 6,
-                loop: true,
-                margin: 10,
-                nav: true,
-                dots: false,
-                navText: [
-                    '<i class="fa-solid fa-circle-chevron-left"></i>',
-                    '<i class="fa-solid fa-circle-chevron-right"></i>'
-                ],
-                onInitialized: updateInfo,
-                onTranslated: updateInfo
-            });
-
-        });
-    </script>
-
-
 </body>
-
 
 </html>

@@ -1,0 +1,169 @@
+        .cube .front {
+            transform: translateZ(30px);
+        }
+
+        .cube .back {
+            transform: rotateX(-180deg) translateZ(30px);
+        }
+
+        .cube .right {
+            transform: rotateY(90deg) translateZ(30px);
+        }
+
+        .cube .left {
+            transform: rotateY(-90deg) translateZ(30px);
+        }
+
+        .cube .top {
+            transform: rotateX(90deg) translateZ(30px);
+        }
+
+        .cube .bottom {
+            transform: rotateX(-90deg) translateZ(30px);
+        }
+
+        .newDice {
+            margin: 20px auto;
+            width: 60px;
+            height: 60px;
+            perspective: 1000px;
+            perspective-origin: 50% 100%;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 2s;
+        }
+
+        .cube div {
+            background: hsla(0, 85%, 50%, 0.85);
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            border: 1% solid #ab1a1a;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 500%;
+            text-align: center;
+            padding: 25% 0;
+        }
+
+        .dot {
+            display: block;
+            position: absolute;
+            width: 15%;
+            height: 15%;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .front .dot1 {
+            top: 42.5%;
+            left: 42.5%;
+        }
+
+        .back .dot1 {
+            top: 22.5%;
+            left: 22.5%;
+        }
+
+        .back .dot2 {
+            top: 62.5%;
+            left: 62.5%;
+        }
+
+        .right .dot1 {
+            top: 22.5%;
+            left: 22.5%;
+        }
+
+        .right .dot2 {
+            top: 42.5%;
+            left: 42.5%;
+        }
+
+        .right .dot3 {
+            top: 62.5%;
+            left: 62.5%;
+        }
+
+        .left .dot1 {
+            top: 22.5%;
+            left: 22.5%;
+        }
+
+        .left .dot2 {
+            top: 22.5%;
+            left: 62.5%;
+        }
+
+        .left .dot3 {
+            top: 62.5%;
+            left: 22.5%;
+        }
+
+        .left .dot4 {
+            top: 62.5%;
+            left: 62.5%;
+        }
+
+        .top .dot1 {
+            top: 22.5%;
+            left: 22.5%;
+        }
+
+        .top .dot2 {
+            top: 22.5%;
+            left: 62.5%;
+        }
+
+        .top .dot3 {
+            top: 42.5%;
+            left: 42.5%;
+        }
+
+        .top .dot4 {
+            top: 62.5%;
+            left: 22.5%;
+        }
+
+        .top .dot5 {
+            top: 62.5%;
+            left: 62.5%;
+        }
+
+        .bottom .dot1 {
+            top: 22.5%;
+            left: 22.5%;
+        }
+
+        .bottom .dot2 {
+            top: 22.5%;
+            left: 42.5%;
+        }
+
+        .bottom .dot3 {
+            top: 22.5%;
+            left: 62.5%;
+        }
+
+        .bottom .dot4 {
+            top: 62.5%;
+            left: 22.5%;
+        }
+
+        .bottom .dot5 {
+            top: 62.5%;
+            left: 42.5%;
+        }
+
+        .bottom .dot6 {
+            top: 62.5%;
+            left: 62.5%;
+        }

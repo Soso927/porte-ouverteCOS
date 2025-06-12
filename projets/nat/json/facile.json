@@ -1,0 +1,797 @@
+{
+    "count": 66,
+    "quizzes": [
+        {
+            "_id": "65391643e5ee48b6a3f7cb63",
+            "question": "Qui a écrit 'La Valise en carton' ?",
+            "answer": "Linda de Suza",
+            "badAnswers": [
+                "Victor Hugo",
+                "Bernard Werber",
+                "Amélie Nothomb"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527889",
+            "question": "Dans quelles aventures retrouve-t-on les personnages de Loïs et Clark ?",
+            "answer": "Superman",
+            "badAnswers": [
+                "Hulk",
+                "Spiderman",
+                "Batman"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "662b7ce7ab1f9aa811c96504",
+            "question": "Comment s'appelle le frère de Mario ?",
+            "answer": "Luigi",
+            "badAnswers": [
+                "Waluigi",
+                "Wario",
+                "Yoshi"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527882",
+            "question": "Avec quel autre animal vit généralement une oie ?",
+            "answer": "Le jars",
+            "badAnswers": [
+                "Le canard",
+                "Le cygne",
+                "La poule"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952785c",
+            "question": "Qui est le premier héro dans Assassin's Creed ?",
+            "answer": "Altaïr",
+            "badAnswers": [
+                "Connor Kenway",
+                "Ezio Auditore",
+                "John White"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527866",
+            "question": "Qui a chanté Joe le taxi ?",
+            "answer": "Vanessa Paradis",
+            "badAnswers": [
+                "Lio",
+                "Mylène Farmer",
+                "Brigitte Bardot"
+            ],
+            "category": "musique",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65fb2d3dab1f9aa811c9489a",
+            "question": "Dans quelle époque se déroule le roman \"Les Trois Mousquetaires\" ?",
+            "answer": "Le XVIIe siècle ",
+            "badAnswers": [
+                "La Renaissance",
+                "Le Moyen Âge",
+                "Le XIXe siècle"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65fb2cd5ab1f9aa811c94896",
+            "question": "Quel est le titre du premier livre de la série \"Harry Potter\" ?",
+            "answer": "Harry Potter à l'école des sorciers",
+            "badAnswers": [
+                "Harry Potter et le Prisonnier d'Azkaban",
+                "Harry Potter et la Coupe de Feu",
+                "Harry Potter et la Chambre des Secrets"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527851",
+            "question": "Qui animait le jeu télévisé le Bigdil ?",
+            "answer": "Vincent Lagaf'",
+            "badAnswers": [
+                "Philippe Risoli",
+                "Laurence Boccolini",
+                "Nagui"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "651c14b3e4123c9a1476b037",
+            "question": "Qui a gagné la coupe du monde 2022",
+            "answer": "Argentine",
+            "badAnswers": [
+                "Algérie",
+                "Congo",
+                "Sri-Lanka"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "645f8741bca7a5cfa9166e14",
+            "question": "Quel est l'animal emblématique de l'Australie ?",
+            "answer": "Kangourou",
+            "badAnswers": [
+                "Koala",
+                "Crocodile",
+                "Émeu"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527885",
+            "question": "Dans quelle ville sont situées les plus célèbres falaises de France ?",
+            "answer": "Etretat",
+            "badAnswers": [
+                "Nice",
+                "Brest",
+                "Saint-Malo"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "6532640ce4123c9a1476ba6f",
+            "question": "Dans quelles régions du globe les cactus poussent-ils le mieux ?",
+            "answer": "Désert",
+            "badAnswers": [
+                "Plaines",
+                "Prairies",
+                "Montagnes"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "663c8d7cab1f9aa811c96f87",
+            "question": "qui a fait le film Avatar",
+            "answer": "James Cameron",
+            "badAnswers": [
+                "Bob marley",
+                "jean Dujardin",
+                "samuel Etienne"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527862",
+            "question": "Quel animal est Sonic ?",
+            "answer": "Hérisson",
+            "badAnswers": [
+                "Raton-laveur",
+                "Chien",
+                "Blaireau"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65fb28b8ab1f9aa811c94847",
+            "question": "Qui est l'auteur de \"Roméo et Juliette\" ?",
+            "answer": "William Shakespeare ",
+            "badAnswers": [
+                "Victor Hugo",
+                "Jane Austen",
+                "Charles Dickens"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "64e0870ce4123c9a1476a2f9",
+            "question": "lequel de ces sports se joue avec un ballon?",
+            "answer": "Handball",
+            "badAnswers": [
+                "saut à la perche",
+                "tennis",
+                "tricot"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65fb2d70ab1f9aa811c9489c",
+            "question": "Quel est le nom du célèbre détective créé par Sir Arthur Conan Doyle ?",
+            "answer": "Sherlock Holmes",
+            "badAnswers": [
+                "Hercule Poirot",
+                "Miss Marple",
+                "Sam Spade"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65ff4451ab1f9aa811c94a78",
+            "question": "Quel sport utilise un ballon rond et se joue principalement avec les pieds ?",
+            "answer": "Football",
+            "badAnswers": [
+                "Basketball",
+                "Tennis",
+                "Rugby"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527847",
+            "question": "En quelle année a été projeté le premier film ?",
+            "answer": "1895",
+            "badAnswers": [
+                "1924",
+                "1912",
+                "1904"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527884",
+            "question": "Avec quoi mesure-t-on la pronfondeur des océans ?",
+            "answer": "Un sonar",
+            "badAnswers": [
+                "Un sextant",
+                "Un radar",
+                "Un compteur Geiger"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527844",
+            "question": "Qui a emballé l'Arc de Triomphe à Paris ?",
+            "answer": "Christo",
+            "badAnswers": [
+                "Tati",
+                "Yoko Ono",
+                "Ben"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "64ad42c1e4123c9a1476969c",
+            "question": "La date de la découverte de l'Amérique (par les européens) ",
+            "answer": "1492",
+            "badAnswers": [
+                "1502",
+                "1451",
+                "1498"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527850",
+            "question": "Dans quelle série a joué l'acteur Jim Parsons ?",
+            "answer": "The Big Bang Theory",
+            "badAnswers": [
+                "How I met your mother",
+                "Game of Thrones",
+                "La petite maison dans la prairie"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "6652fd80ab1f9aa811c98128",
+            "question": "Quel pays à pris la CAN 2024",
+            "answer": "Côte d'ivoire",
+            "badAnswers": [
+                "Mali",
+                "Égypte ",
+                "Maroc"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "68404db76350b1adf928ac83",
+            "question": "Quel est le prénom du King des Thrillers/Horreurs ?",
+            "answer": "Stephen",
+            "badAnswers": [
+                "Burger",
+                "Kong",
+                "Elvis"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527861",
+            "question": "En quelle année les jeux FIFA Football ont-ils commencé à être édités ?",
+            "answer": "1993",
+            "badAnswers": [
+                "1994",
+                "1998",
+                "2000"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "645a36bbbca7a5cfa9166d7a",
+            "question": "Qui a écrit 'La Valise en carton' ?",
+            "answer": "Linda de Suza",
+            "badAnswers": [
+                "Victor Hugo",
+                "Bernard Werber",
+                "Amélie Nothomb"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "646fd8fcbca7a5cfa9167006",
+            "question": "Qui a écrit 'La Valise en carton' ?",
+            "answer": "Linda de Suza",
+            "badAnswers": [
+                "Victor Hugo",
+                "Bernard Werber",
+                "Amélie Nothomb"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952787a",
+            "question": "Quelle est la seule valeur à la roulette à porter la couleur verte ?",
+            "answer": "Le zéro",
+            "badAnswers": [
+                "Le cinquante",
+                "Le quarante",
+                "Le treize"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527883",
+            "question": "Quelle est la plus grande tortue marine connue à ce jour ?",
+            "answer": "La tortue luth",
+            "badAnswers": [
+                "La tortue franche",
+                "La tortue ninja",
+                "La tortue argneuse"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952784b",
+            "question": "Qui a réalisé le film Titanic ?",
+            "answer": "James Cameron",
+            "badAnswers": [
+                "Steven Spielberg",
+                "David Lynch",
+                "Chirstopher Nolan"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527880",
+            "question": "Dans quelle ville se trouve la fontaine de Trevi ?",
+            "answer": "Rome",
+            "badAnswers": [
+                "Venise",
+                "Barcelone",
+                "Seville"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65fb2d0bab1f9aa811c94898",
+            "question": "Qui est l'auteur du roman \"Orgueil et Préjugés\" ?",
+            "answer": "Jane Austen",
+            "badAnswers": [
+                "Emily Brontë",
+                "Louisa May Alcott",
+                "Charlotte Brontë"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952783f",
+            "question": "Quel est la particularité de l'artiste Banksy ?",
+            "answer": "Identité inconnue",
+            "badAnswers": [
+                "Homme Politique",
+                "Drag Queen",
+                "Pas encore majeur"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527846",
+            "question": "Qui a joué en premier le rôle de James Bond ?",
+            "answer": "Sean Connery",
+            "badAnswers": [
+                "Roger Moore",
+                "George Lazenby",
+                "Timothy Dalton"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527872",
+            "question": "Quel nom porte le logiciel de traitement de texte mis au point par Microsoft ?",
+            "answer": "Word",
+            "badAnswers": [
+                "Access",
+                "Excel",
+                "PowerPoint"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65a8ea2ac4a3d379edfec1d8",
+            "question": "Qui est Zlatan Ibrahimovic ?",
+            "answer": "Un joueur de football suédois",
+            "badAnswers": [
+                "Un joueur de football serbe",
+                "Un joueur de football croate",
+                "Un joueur de football bulgare"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65114882e4123c9a1476ae81",
+            "question": "Comment s'appelle le frère de Sasuke Uchiwa ?",
+            "answer": "Itachi",
+            "badAnswers": [
+                "Obito",
+                "Madara",
+                "Kakashi"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "6532873de4123c9a1476bb18",
+            "question": "Quel est le métier d’Obélix dans les aventures d’Astérix et Obélix ?",
+            "answer": "Tailleur et livreur de menhirs",
+            "badAnswers": [
+                "Chef de village",
+                "Chasseur de sanglier",
+                "Forgeron"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "64ad4446e4123c9a1476969e",
+            "question": "Qui était le premier empereur romain ?",
+            "answer": "Auguste",
+            "badAnswers": [
+                "Jules César",
+                "Néron",
+                "Cicéron"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65326537e4123c9a1476ba7b",
+            "question": "Dans les X-Men, quelle substance constitue le squelette principal de Wolverine ?",
+            "answer": "Adamatium",
+            "badAnswers": [
+                "Vibranium",
+                "Cavorite",
+                "Neutronium"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "66057684ab1f9aa811c94cf3",
+            "question": "Qui était le sélectionneur de l'équipe de France à la coupe du monde 2010?",
+            "answer": "Raymond Domenech",
+            "badAnswers": [
+                "Didier Deschamps",
+                "Aimé Jacquet",
+                "Michel Hidalgo"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527848",
+            "question": "Rocky est un film qui parle de vie d'un ... ?",
+            "answer": "Boxeur",
+            "badAnswers": [
+                "Avocat",
+                "Chanteur",
+                "Journaliste"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527854",
+            "question": "Sur quelle plateforme a été lancé la licence Final Fantasy ?",
+            "answer": "Nintendo Famicom",
+            "badAnswers": [
+                "Sony PlayStation",
+                "Microsoft Xbox",
+                "Sega Megadrive"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "68404c526350b1adf928ac81",
+            "question": "Dans quel série peut-on entendrela phrase suivante : \"faut arrêter ces conneries de nord et de sud ! Une fois pour toutes, le nord, suivant comment on est tourné, ça change tout !\"\"",
+            "answer": "Kaamelott",
+            "badAnswers": [
+                "Loïs & Clarck",
+                "Caméra Café",
+                "Game of Thrones"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952787c",
+            "question": "Quel insecte appelle-t-on aussi la bête à bon dieu ?",
+            "answer": "La coccinelle",
+            "badAnswers": [
+                "La luciole",
+                "Le scarabée",
+                "La libellule"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "659672fde5ee48b6a3f8001c",
+            "question": "Combien de joueurs composent une ligne au hockey sur glace ?",
+            "answer": "5",
+            "badAnswers": [
+                "6",
+                "15",
+                "16"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "645f8790bca7a5cfa9166e18",
+            "question": "Quel est le plus grand désert du monde ?",
+            "answer": "Sahara",
+            "badAnswers": [
+                "Kalahari",
+                "Gobi",
+                "Australien"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "67b856046350b1adf927c03e",
+            "question": "Quel joueur possède le plus de ballon d'or ?",
+            "answer": "Lionel Messi",
+            "badAnswers": [
+                "Neymar Jr",
+                "Cristiano Ronaldo",
+                "Karim Benzema"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "674713f66350b1adf9276bc7",
+            "question": "En quelle année l'équipe de France a-t-elle remportée sa dernière coupe du monde ?",
+            "answer": "2018",
+            "badAnswers": [
+                "2008",
+                "2006",
+                "1998"
+            ],
+            "category": "sport",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "651148a4e4123c9a1476ae83",
+            "question": "Comment s'appelle le frère de Sasuke Uchiwa ?",
+            "answer": "Itachi",
+            "badAnswers": [
+                "Obito",
+                "Madara",
+                "Kakashi"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952787e",
+            "question": "Combien de temps dure le mandat du président des Etats-Unis ?",
+            "answer": "4 ans",
+            "badAnswers": [
+                "5 ans",
+                "6 ans",
+                "7 ans"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527863",
+            "question": "Le film 'Quatre garçons dans le vent' met en scène quel groupe de musique ?",
+            "answer": "Les Beatles",
+            "badAnswers": [
+                "Les Rolling stones",
+                "The Animals",
+                "Evanescence"
+            ],
+            "category": "musique",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527877",
+            "question": "Dans le langage familier, comment appelle-t-on la dente du petit enfant ?",
+            "answer": "Quenotte",
+            "badAnswers": [
+                "Marmotte",
+                "Menotte",
+                "Bouillotte"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "65b253bdbb53f288fc2ca858",
+            "question": "comment s'appelle l'héroïne de nier",
+            "answer": "2B",
+            "badAnswers": [
+                "C4",
+                "69",
+                "96"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "67f55aac6350b1adf9283923",
+            "question": "Qui a écrit Les Misérables ?",
+            "answer": "Victor Hugo",
+            "badAnswers": [
+                "Gustave Flaubert",
+                "Emile Zola",
+                "Molière"
+            ],
+            "category": "art_litterature",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "6596729ee5ee48b6a3f8001a",
+            "question": "Comment s'appellent les employés minuscules de Willy Wonka",
+            "answer": "Oompa Loompa",
+            "badAnswers": [
+                "Goonies",
+                "Minimoys",
+                "Ula oups"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952786b",
+            "question": "Quel était le surnom donné à Michael Jackson ?",
+            "answer": "King of the Pop",
+            "badAnswers": [
+                "King of Rock",
+                "King of Music",
+                "King of Danse"
+            ],
+            "category": "musique",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527876",
+            "question": "Quel oiseau palmipède a pour particularité de construire un nid flottant ?",
+            "answer": "La grèbe",
+            "badAnswers": [
+                "La grèle",
+                "La grève",
+                "La grène"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "64ad463ae4123c9a147696a2",
+            "question": "Qui a été le premier roi de France ?",
+            "answer": "Clovis 1er",
+            "badAnswers": [
+                "Charlemagne",
+                "Pépin le bref",
+                "Eudes"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952784d",
+            "question": "Lequel de ces films n'a pas été réalisé par Quentin Tarentino ?",
+            "answer": "Matrix",
+            "badAnswers": [
+                "Pulp Fiction",
+                "Kill Bill",
+                "Les huit salopards"
+            ],
+            "category": "tv_cinema",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa952786a",
+            "question": "Quel groupe chante 'Roxanne ?",
+            "answer": "Police",
+            "badAnswers": [
+                "INXS",
+                "Nirvana",
+                "Scorpion"
+            ],
+            "category": "musique",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "64ad413de4123c9a14769698",
+            "question": "La date de l'invention de l'écriture ?",
+            "answer": "-3300",
+            "badAnswers": [
+                "-2900",
+                "-10500",
+                "-3600"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "645f876abca7a5cfa9166e16",
+            "question": "Quel est le plus grand désert du monde ?",
+            "answer": "Sahara",
+            "badAnswers": [
+                "Kalahari",
+                "Gobi",
+                "Australien"
+            ],
+            "category": "culture_generale",
+            "difficulty": "facile"
+        },
+        {
+            "_id": "642438e068d7ea9aa9527856",
+            "question": "Lequel de ses personnages n'est pas disponible dans le jeu Street of Rage ?",
+            "answer": "Rick Thunder",
+            "badAnswers": [
+                "Adam Hunter",
+                "Axel Stone",
+                "Blaze Fielding"
+            ],
+            "category": "jeux_videos",
+            "difficulty": "facile"
+        }
+    ]
+}
