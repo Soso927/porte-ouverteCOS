@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <title>COS 2025 - Page principale</title>
+    <title>FlipHero</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script type="module" src="src/js/main.js" defer></script>
 </head>
-<body>
 
-    
+<body>
+    <div class="modal_regles">
+        <div class="modal-content_regles">
+            <h1>Flip Hero<span>X</span></h1>
+            <h2>Règles</h2>
+            <ul>
+                <li>Flip Hero est jeu de mémoire avec des petits element de duel inspiré d'autre jeu de carte tel
+                    hearthstone</li>
+                <li>Vous devez trouvé les paires de cartes pour lancer leurs effets</li>
+                <li>Si vous vous trompez vous perdez 1pv meme si vous possedez de l'armure !</li>
+                <li>Vous jouez a tour de rôles, le joueur rouge commence</li>
+                <li>Le premier qui tombe a 0 pv a perdue</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- logo retour Accueil -->
+        <a class="go-home" href="../../index.html">
+            <svg width="50px" height="50px" fill="bisque" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+        </a>
+
+        <div id="joueur_1">
+
+        </div>
+
+        <div id="hud">
+            <div class="score-joueur_1">
+                <p class="hud-stat-1"><span>10</span> PV <span>0</span> Armure</p>
+            </div>
+
+            <button id="flip-all">Lancer la partie</button>
+
+            <div class="tour-joueur">
+                <p>joueur 1</p>
+            </div>
+
+            <button id="reset">Remise a zero</button>
+
+            <div class="score-joueur_2">
+                <p class="hud-stat-2"><span>10</span> PV <span>0</span> Armure</p>
+            </div>
+        </div>
+
+        <div id="joueur_2">
+
+        </div>
+
+    </main>
+
+    <div class="modal-fin">
+        <div class="modal-content_fin">
+            <h1>Fin de partie</h1>
+            <p>Victoire du <span id="gagnant"></span></p>
+            <button id="reset-modal">Rejouer</button>
+            <button onclick="window.location.href = '../../index.html';">Accueil</button>
+        </div>
+    </div>
+
 </body>
+
 </html>
