@@ -65,6 +65,9 @@ let gagnant
 //tout les 2 click ma variable tour change et mon code peut passer d'une condition a l'autre tout les 2 click au lieu d'un seul
 const fullCarte = document.querySelectorAll(".carte")
 const afficheJoueur = document.querySelector(".tour-joueur p")
+const cartesJ1Tab = Array.from(cartesJ1);
+const cartesJ2Tab = Array.from(cartesJ2);
+let finCarte = false
 
 fullCarte.forEach(carte => {
     carte.addEventListener("click", ()=> {
@@ -86,12 +89,31 @@ fullCarte.forEach(carte => {
         }
 
         console.log(joueur_1_score)
-        //detection de la victorie d'un joueur  
-        gagnant = (joueur_1_score[0].textContent <= "0") ? "Joueur 2" : "Joueur 1";
-
         
+        
+        // detection si toutes les cartes sont retouré 
+        if (cartesJ1Tab.every(carte => carte.style.pointerEvents === 'none') && joueur_2_score[0].textContent > "0") {
+            console.log("JOUEUR 1 N'A PLUS DE CARTES A RETOURNER");
+            gagnant = "joueur 2"
+            finCarte = true
+        }
+        else if(cartesJ2Tab.every(carte => carte.style.pointerEvents === 'none') && joueur_1_score[0].textContent > "0"){
+            console.log("JOUEUR 2 N'A PLUS DE CARTES A RETOURNER");
+            gagnant = "joueur 1"
+            finCarte = true
+        }
+        else if(joueur_1_score[0].textContent <= "0"){
+            gagnant = "joueur 2"
+        }
+        else if(joueur_2_score[0].textContent <= "0"){
+            gagnant = "joueur 1"
+        }
+        
+        //detection de la victorie d'un joueur  
+        // gagnant = (joueur_1_score[0].textContent <= "0") ? "Joueur 2" : "Joueur 1";
 
-        if (joueur_1_score[0].textContent <= "0" || joueur_2_score[0].textContent <= "0"){
+
+        if (joueur_1_score[0].textContent <= "0" || joueur_2_score[0].textContent <= "0" || finCarte === true ){
             const event = new CustomEvent('finPartie',{
                 detail : {condition : gagnant}
                 })
@@ -130,8 +152,6 @@ joueur_1.addEventListener("finPartie", (event)=> {
         document.querySelector("#gagnant").textContent = event.detail.condition
     },500)
 })
-
-//bouton fenetre 
 
 
 
