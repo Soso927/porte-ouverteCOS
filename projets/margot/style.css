@@ -22,7 +22,7 @@ body {
 .car__image {
     width: 100%;
     aspect-ratio: 1/1;
-    background: url('../medias/car_background.svg');
+    background: url('./medias/car_background.svg');
     background-size: cover;
     position: relative;
     overflow: hidden;

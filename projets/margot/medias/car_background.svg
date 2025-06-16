@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 1500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #717171;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #4b4b4b;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" width="250" height="1500"/>
+  <polygon id="route" class="cls-3" points="250 660 190 660 190 0 60 0 60 660 0 660 0 790 60 790 60 1500 190 1500 190 790 250 790 250 660"/>
+  <g>
+    <rect class="cls-2" x="202" y="672.5" width="40" height="7"/>
+    <rect class="cls-2" x="202" y="686.5" width="40" height="7"/>
+    <rect class="cls-2" x="202" y="700.5" width="40" height="7"/>
+    <rect class="cls-2" x="202" y="714.5" width="40" height="7"/>
+    <rect class="cls-2" x="202" y="728.5" width="40" height="7"/>
+    <rect class="cls-2" x="202" y="742.5" width="40" height="7"/>
+    <rect class="cls-2" x="202" y="756.5" width="40" height="7"/>
+    <rect class="cls-2" x="202" y="770.5" width="40" height="7"/>
+    <g>
+      <g id="ligne_milieu" data-name="ligne milieu">
+        <rect class="cls-2" x="123.5" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="75" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="150" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="225" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="300" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="375" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="450" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="525" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="600" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="675" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="750" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="825" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="900" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="975" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="1050" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="1125" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="1200" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="1275" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="1350" width="3" height="25"/>
+        <rect class="cls-2" x="123.5" y="1425" width="3" height="25"/>
+      </g>
+      <polygon class="cls-2" points="62 600 62 662 0 662 0 665 62 665 65 665 65 662 65 600 62 600"/>
+      <polygon class="cls-2" points="0 785 0 788 62 788 62 850 65 850 65 788 65 786.5 65 785 0 785"/>
+      <g>
+        <rect class="cls-2" x="62" width="3" height="50"/>
+        <g>
+          <rect class="cls-2" x="62" y="100" width="3" height="50"/>
+          <rect class="cls-2" x="62" y="200" width="3" height="50"/>
+          <rect class="cls-2" x="62" y="300" width="3" height="50"/>
+          <rect class="cls-2" x="62" y="400" width="3" height="50"/>
+          <rect class="cls-2" x="62" y="500" width="3" height="50"/>
+        </g>
+        <rect class="cls-2" x="185" width="3" height="50"/>
+        <rect class="cls-2" x="185" y="100" width="3" height="50"/>
+        <rect class="cls-2" x="185" y="200" width="3" height="50"/>
+        <rect class="cls-2" x="185" y="300" width="3" height="50"/>
+        <rect class="cls-2" x="185" y="400" width="3" height="50"/>
+        <rect class="cls-2" x="185" y="500" width="3" height="50"/>
+      </g>
+      <polygon class="cls-2" points="188 662 188 600 185 600 185 662 185 665 188 665 250 665 250 662 188 662"/>
+      <polygon class="cls-2" points="250 785 188 785 185 785 185 788 185 850 188 850 188 788 250 788 250 785"/>
+    </g>
+    <g>
+      <rect class="cls-2" x="62" y="900" width="3" height="50"/>
+      <rect class="cls-2" x="62" y="1000" width="3" height="50"/>
+      <rect class="cls-2" x="62" y="1100" width="3" height="50"/>
+      <rect class="cls-2" x="62" y="1200" width="3" height="50"/>
+      <rect class="cls-2" x="62" y="1300" width="3" height="50"/>
+      <rect class="cls-2" x="62" y="1400" width="3" height="50"/>
+      <rect class="cls-2" x="185" y="900" width="3" height="50"/>
+      <rect class="cls-2" x="185" y="1000" width="3" height="50"/>
+      <rect class="cls-2" x="185" y="1100" width="3" height="50"/>
+      <rect class="cls-2" x="185" y="1200" width="3" height="50"/>
+      <rect class="cls-2" x="185" y="1300" width="3" height="50"/>
+      <rect class="cls-2" x="185" y="1400" width="3" height="50"/>
+    </g>
+    <g>
+      <rect class="cls-2" x="8" y="672.5" width="40" height="7"/>
+      <rect class="cls-2" x="8" y="686.5" width="40" height="7"/>
+      <rect class="cls-2" x="8" y="700.5" width="40" height="7"/>
+      <rect class="cls-2" x="8" y="714.5" width="40" height="7"/>
+      <rect class="cls-2" x="8" y="728.5" width="40" height="7"/>
+      <rect class="cls-2" x="8" y="742.5" width="40" height="7"/>
+      <rect class="cls-2" x="8" y="756.5" width="40" height="7"/>
+      <rect class="cls-2" x="8" y="770.5" width="40" height="7"/>
+    </g>
+  </g>
+  <g>
+    <polygon class="cls-1" points="250 790 194 790 193.4 790 190 790 190 1500 194 1500 194 794 250 794 250 790"/>
+    <polygon class="cls-1" points="0 790 56 790 56.6 790 60 790 60 1500 56 1500 56 794 0 794 0 790"/>
+    <polygon class="cls-1" points="194 656 194 0 190 0 190 656 190 660 194 660 250 660 250 656 194 656"/>
+    <polygon class="cls-1" points="56 656 56 0 60 0 60 656 60 660 56 660 0 660 0 656 56 656"/>
+  </g>
+</svg>
