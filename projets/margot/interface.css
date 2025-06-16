@@ -1,0 +1,745 @@
+/********************************* game interface *****************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: column;
+    align-items: center; 
+    gap: 0.3em; */
+    height: 100vh;
+}
+
+.column-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+
+.column-article {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.content-nom-profil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ebeff3;
+    font-size: 20px;
+    gap: 10px;
+    background: var(--color-dark-light);
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+
+.content-nom-profil i {
+    color: #ebeff3;
+    font-size: 25px;
+}
+
+/********************************* radio *****************************/
+
+.content-radio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    width: 17%;
+    padding: 15px;
+    border-top: 2px solid #ffffff75;
+    border-left: 2px solid #ffffff75;
+    box-shadow: 5px 5px 12px #02020235;
+    background: var(--back-opacite);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+}
+
+h2 {
+    color: var(--txt-color);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.content-line-radio {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+    width: 100%;
+}
+
+#stationImage {
+    width: 75px;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    margin-left: 10px;
+}
+
+.content-media-radio {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content-title-radio {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: var(--txt-color);
+}
+
+#trackTitle {
+    font-weight: 600;
+}
+
+#customControls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#customControls button {
+    font-size: 25px;
+    color: var(--txt-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+#volumeSlider {
+    width: 100px;
+}
+
+/********************************* info button control *****************************/
+
+.content-pause-btn {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.btn-pause {
+    border: none;
+    padding: 10px 25px;
+    margin: 0;
+    color: var(--txt-color);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid var(--border-btn-circle);
+    background: var(--gradient-btn-circle);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+.btn-pause:hover {
+    transition: 0.3s;
+    transform: scale(0.96);
+}
+
+.color-mode {
+    padding: 10px 10px 7px 10px;
+    margin: 0;
+    color: var(--txt-color);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid var(--border-btn-circle);
+    background: var(--gradient-btn-circle);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+.color-mode:hover {
+    transition: 0.3s;
+    transform: scale(0.96);
+}
+
+.content-btn-keyboard {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.keyboard-btn {
+    display: flex;
+    align-items: center;
+    background: var(--color-dark-light);
+    color: #ebeff3;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.keyboard-btn:hover {
+    background: var(--color-light);
+    color: var(--color-dark-light);
+    transition: 0.3s;
+    transform: scale(0.96);
+}
+
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    border-top: 2px solid #ffffff75;
+    border-left: 2px solid #ffffff75;
+    box-shadow: 5px 5px 12px #02020235;
+    background: #ffffff25;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    padding: 15px 35px;
+    width: 30%;
+    max-width: 80%;
+    border-radius: 25px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transform: scaleX(0);
+    opacity: 0;
+    animation: apparPop 0.3s ease-in forwards;
+}
+
+@keyframes apparPop {
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+}
+
+.content-btn-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.content-btn-navigation h1 {
+    font-size: 30px;
+    color: #ebeff3;
+}
+
+.button-close {
+    /* position: absolute; */
+    color: #ebeff3;
+    cursor: pointer;
+    /* top: 20px;
+    right: 20px; */
+    font-size: 30px;
+    transition: 0.35s;
+}
+
+.container-info-btn {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.scrollable-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.list li {
+    list-style: none;
+    border-bottom: 2px solid #ebeff3;
+    padding-inline-start: 0;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.list {
+    width: 100%;
+    height: 80%;
+}
+
+
+.content-media-clavier {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+li h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ebeff3;
+}
+
+span p {
+    color: #ebeff3;
+}
+
+span img {
+    height: 80px;
+}
+
+ol,
+ul {
+    padding: 0;
+}
+
+.warning-background {
+    background-color: firebrick;
+}
+
+.cligno-background {
+    background-color: rgb(111, 183, 40);
+}
+
+.nitro-background {
+    background-color: royalblue;
+}
+
+.phare-av-background {
+    background-color: #2090db;
+}
+
+.klaxon-background {
+    background-color: goldenrod;
+}
+
+/********************************* controls button *****************************/
+
+.car__controls {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+    background: var(--back-manette);
+    border: 2px solid var(--border-back);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#center {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#down {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.btn-game {
+    border: none;
+    padding: 10px;
+    margin: 0;
+    color: var(--txt-color);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.btn-rect {
+    border-radius: 20px;
+    background-color: var(--back-btn-rect);
+    border: 2px solid var(--border-btn-rect);
+    box-shadow:
+        var(--box-shadow-rect);
+}
+
+.btn-circle {
+    border-radius: 50%;
+    border: 2px solid var(--border-btn-circle);
+    background: var(--gradient-btn-circle);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+.btn-game:hover {
+    transition: 0.3s;
+    transform: scale(0.96);
+}
+
+.btn-game img {
+    width: 27px;
+}
+
+.warning {
+    color: firebrick;
+}
+
+.cligno {
+    color: rgb(111, 183, 40);
+}
+
+.nitro {
+    color: royalblue;
+}
+
+.btn-nitro-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, royalblue, #8099e3);
+}
+
+.btn-nitro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, #8099e3, royalblue);
+    border-radius: 40px;
+    padding: 22px;
+    z-index: 1;
+    color: #ebeff3;
+}
+
+
+.btn-nitro:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, #8099e3, royalblue);
+    border-radius: 40px;
+    padding: 22px;
+    z-index: 1;
+    transition: 0.3s;
+    transform: scale(0.96);
+}
+
+.pwr-color {
+    color: #cb0a0a;
+}
+
+.phare-av {
+    color: #2090db;
+}
+
+.klaxon-color {
+    color: goldenrod;
+}
+
+/********************************* decompte jeu *****************************/
+
+
+.feu-depart {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    z-index: 9999;
+    background: #000000;
+    padding: 20px 15px;
+    border-radius: 70px;
+}
+
+.lumiere {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333;
+    box-shadow: 0 0 5px #000;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.allume {
+    box-shadow: 0 0 20px 8px;
+}
+
+.rouge.allume {
+    background: radial-gradient(red 20%, #761010 80%);
+    box-shadow: 2px 5px 8px rgba(255, 0, 0, 0.65);
+}
+
+.orange.allume {
+    background: radial-gradient(orange 20%, #b47500 80%);
+    box-shadow: 2px 5px 8px rgba(255, 166, 0, 0.65);
+}
+
+.verte.allume {
+    background: radial-gradient(limegreen 20%, #256b25 80%);
+    box-shadow: 2px 5px 8px #32cd32a6;
+}
+
+
+.countdown {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 120px;
+    text-shadow: 5px 5px 10px #000000;
+     /* -webkit-text-stroke: 3px #ffffff;
+    letter-spacing: 3px; */
+    width: 12%;
+    color: #00dfd6;
+    z-index: 9999;
+    text-align: center;
+    animation: pop 1s ease-out forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+#timer {
+    font-family: "Allerta Stencil", sans-serif;
+    position: absolute;
+    top: 20px;
+    right: 365px;
+    padding: 20px 10px;
+    width: 10%;
+    font-size: 20px;
+    color: #ebeff3;
+    border-top: 2px solid #ffffff75;
+    border-left: 2px solid #ffffff75;
+    box-shadow: 5px 5px 12px #02020235;
+    background: var(--back-opacite);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+}
+
+
+/********************************* nitro infos *****************************/
+
+
+.nitro-compteur {
+    font-family: "Allerta Stencil", sans-serif;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background: var(--color-dark-light);
+    color: #ebeff3;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.nitro-temps {
+    font-family: "Allerta Stencil", sans-serif;
+    width: 15%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #ebeff3;
+    font-weight: bold;
+    border-top: 2px solid #ffffff75;
+    border-left: 2px solid #ffffff75;
+    box-shadow: 5px 5px 12px #02020235;
+    background: var(--back-opacite);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    padding: 20px 0;
+    border-radius: 25px;
+    display: none;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+/********************************* vies design *****************************/
+
+.vies-compteur {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-dark-light);
+    color: #ebeff3;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: "Allerta Stencil", sans-serif;
+}
+
+.vies-compteur i {
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.vies-message {
+    width: 15%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    background: rgba(255, 0, 0, 0.3);
+    border-top: 2px solid #ffffff75;
+    border-left: 2px solid #ffffff75;
+    box-shadow: 5px 5px 12px #02020235;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 25px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+
+/********************************* popup fin jeu *****************************/
+
+
+.game-over-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.game-over-popup.defaite {
+    background: rgba(255, 0, 0, 0.3);
+}
+
+.game-over-popup.victoire {
+    background: rgba(0, 128, 0, 0.3);
+}
+
+.popup-content-over {
+    border-top: 2px solid #ffffff75;
+    border-left: 2px solid #ffffff75;
+    box-shadow: 5px 5px 12px #02020235;
+    background: #ffffff25;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ebeff3;
+}
+
+#game-over-message {
+    margin-bottom: 20px;
+    color: #ebeff3;
+   font-size: 35px;
+}
+
+.popup-content-over button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.popup-content-over button i {
+    margin-right: 4px;
+}
+
+#rejouer-btn {
+    background-color: #4caf50;
+    color: #ebeff3;
+}
+
+#rejouer-btn:hover {
+    transform: scale(0.96);
+}
+
+
+#viePlus-btn {
+    background: var(--color-dark-light);
+    color: #ebeff3;
+}
+
+#viePlus-btn:hover {
+    transform: scale(0.96);
+}
+
+#quitter-btn {
+    background-color: #f44336;
+    color: #ebeff3;
+}
+
+#quitter-btn:hover {
+    transform: scale(0.96);
+}

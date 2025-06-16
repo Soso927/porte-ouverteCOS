@@ -1,14 +1,1440 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="atomic.css">
+  <link rel="stylesheet" href="home.css">
+  <script src="main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
 
-    <title>COS 2025 - Page principale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
-<body>
 
-    
+<body onload="afficherDateHome()" class="typo-main">
+
+  <div class="video-container">
+    <video id="introVideo" autoplay>
+      <source src="medias/anim-intro-jeu-2.mp4" type="video/mp4">
+    </video>
+    <button class="typo-main" id="passeBtn">Passer l'intro</button>
+  </div>
+
+  <div class="containerBody" style="display: none;">
+
+    <section class="height"></section>
+
+    <section class="height">
+      <div class="content-screen">
+
+        <main class="screen">
+
+          <section class="homeFlex">
+            <header>
+              <div class="left-info">
+                <div id="clock"></div>
+              </div>
+
+              <div class="center-info">
+                <div class="icon-user"><i class="fa-solid fa-circle-user"></i></div>
+                <div id="text-display"></div>
+              </div>
+
+              <div class="right-info">
+                <p>28°C</p>
+                <i class="fa-solid fa-circle-play"></i>
+                <i id="icon-location" class="fa-solid fa-location-arrow"></i>
+                <i id="icon-bluetooth" class="fa-brands fa-bluetooth"></i>
+                <i id="icon-link" class="fa-solid fa-link"></i>
+                <i class="reseau fa-solid fa-signal"></i>
+              </div>
+            </header>
+
+            <div class="container">
+
+              <section class="column-left">
+
+                <button data-id="bloc-5" class="music-btn">
+                  <i class="fa-solid fa-music"></i>
+                </button>
+
+                <button data-id="bloc-6" class="plan-btn">
+                </button>
+
+                <button data-id="bloc-7" class="tel-btn">
+                  <i class="fa-solid fa-phone"></i>
+                </button>
+
+                <button data-id="bloc-15" class="fart-btn">
+                  <i class="fa-solid fa-wind"></i>
+                </button>
+
+                <div class="content-home-btn">
+                  <a href="" class="btnHome"><i class="fa-solid fa-house"></i></a>
+                </div>
+
+              </section>
+
+              <section class="column-center">
+
+                <div class="containerBoxs">
+                  <!-------------------------------------------------------------------- profil --------------------------------------------------------------------->
+                  <div class="boxs apparent" data-content="bloc-0">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Profil</h1>
+                    </div>
+
+                    <div class="textarea-container">
+                      <textarea class="textArea" data-textarea-id="txtarea" placeholder="pseudo">
+            </textarea>
+                      <button class="ok-btn">ok</button>
+                    </div>
+
+
+                    <div class="content-clavier">
+                      <div class="content-line-clavier color-clear">
+                        <button class="button-clavier key letter">a</button>
+                        <button class="button-clavier key letter">z</button>
+                        <button class="button-clavier key letter">e</button>
+                        <button class="button-clavier key letter">r</button>
+                        <button class="button-clavier key letter">t</button>
+                        <button class="button-clavier key letter">y</button>
+                        <button class="button-clavier key letter">u</button>
+                        <button class="button-clavier key letter">i</button>
+                        <button class="button-clavier key letter">o</button>
+                        <button class="button-clavier key letter">p</button>
+                      </div>
+                      <div class="content-line-clavier color-clear">
+                        <button class="button-clavier key letter">q</button>
+                        <button class="button-clavier key letter">s</button>
+                        <button class="button-clavier key letter">d</button>
+                        <button class="button-clavier key letter">f</button>
+                        <button class="button-clavier key letter">g</button>
+                        <button class="button-clavier key letter">h</button>
+                        <button class="button-clavier key letter">j</button>
+                        <button class="button-clavier key letter">k</button>
+                        <button class="button-clavier key letter">l</button>
+                        <button class="button-clavier key letter">m</button>
+                      </div>
+                      <div class="content-line-clavier color-clear">
+                        <button class="button-clavier key shift fleche"><i class="fa-solid fa-up-long"></i></button>
+                        <button class="button-clavier key letter">w</button>
+                        <button class="button-clavier key letter">x</button>
+                        <button class="button-clavier key letter">c</button>
+                        <button class="button-clavier key letter">v</button>
+                        <button class="button-clavier key letter">b</button>
+                        <button class="button-clavier key letter">n</button>
+                        <button class="button-clavier key letter">'</button>
+                        <button class="button-clavier key delete fleche"><i
+                            class="fa-solid fa-delete-left"></i></button>
+                      </div>
+                      <div class="content-line-clavier color-clear">
+                        <button class="button-clavier mix">123</button>
+                        <button class="button-clavier key space espace">espace</button>
+                        <button class="button-clavier mix">retour</button>
+                      </div>
+                    </div>
+
+                    <div class="content-next">
+                      <button class="next-btn" data-id="bloc-2">
+                        <p>suivant</p><i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- accueil --------------------------------------------------------------------->
+                  <div class="boxs hidden center-contenu" data-content="bloc-1">
+
+
+                    <div class="content-app-line">
+                      <button class="profil-btn" data-id="bloc-0"><i class="fa-solid fa-user"></i></button>
+                      <button class="calendar-btn-app" data-id="bloc-1">
+                        <p id="date"></p>
+                        <p id="jour"></p>
+                      </button>
+                      <button class="car-btn" data-id="bloc-2"><i class="fa-solid fa-car"></i></button>
+                      <button class="radio-btn" data-id="bloc-3"><i class="fa-solid fa-radio"></i></button>
+                      <button class="parametre-btn-app" data-id="bloc-4"><i class="fa-solid fa-gear"></i></button>
+                    </div>
+
+                    <div class="content-app-txt">
+                      <a>Profil</a>
+                      <a>Calendrier</a>
+                      <a>Car</a>
+                      <a>Radio</a>
+                      <a>Paramètre</a>
+                    </div>
+
+                    <div class="content-app-line">
+                      <button data-id="bloc-5" class="music-btn-app"><i class="fa-solid fa-music"></i></button>
+                      <button data-id="bloc-6" class="plan-btn-app"></button>
+                      <button data-id="bloc-7" class="tel-btn-app"><i class="fa-solid fa-phone"></i></button>
+                      <button class="appStore" data-id="bloc-8"><i class="fa-brands fa-app-store"></i></button>
+                      <button class="assist-btn" data-id="bloc-9"><i class="fa-solid fa-circle-info"></i></button>
+                    </div>
+
+                    <div class="content-app-txt">
+                      <a>Music</a>
+                      <a>Plan</a>
+                      <a>Phone</a>
+                      <a>App Store</a>
+                      <a>Assistance</a>
+                    </div>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- select car --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-2">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Véhicule</h1>
+                    </div>
+
+                    <div class="container-image">
+                      <h2 id="carName" class="car-name color-txt"></h2>
+                      <div class="car-image-wrapper">
+                        <img id="imageBack" src="medias/car_color/car-aston.png" alt="carColor">
+                        <div id="lockOverlay" class="lock-overlay">
+                          <button class="btn-unlock" id="unlockBtn"><i class="fa-solid fa-lock"></i></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="confirmationMessage" class="confirmation-message"></div>
+
+                    <div class="carousel-container">
+                      <button class="btn-carousel" id="prevBtn"><i class="fa-solid fa-circle-arrow-left"></i></button>
+                      <div class="carrousel-view">
+                        <div class="car-options-carousel" id="carouselButtons"></div>
+                      </div>
+                      <button class="btn-carousel" id="nextBtn"><i class="fa-solid fa-circle-arrow-right"></i></button>
+                    </div>
+
+                    <div class="content-btn">
+                      <button onclick="validerChoix()" class="btn-valide-choix">Valider</button>
+                    </div>
+
+                    <div class="content-next2">
+                      <button class="next-btn" data-id="bloc-14"><i class="fa-solid fa-list"></i></button>
+                      <button class="next-btn" data-id="bloc-3">
+                        <p>suivant</p><i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+
+                    <!-- Popup déverrouillage -->
+                    <div id="unlockModal" class="modal" style="display: none;">
+                      <div class="modal-content" id="modalContent">
+                        <button class="close-btn" id="closeUnlockModal">&times;</button>
+                        <h2>Déverrouiller le véhicule</h2>
+                        <input type="text" id="unlockCodeInput" placeholder="Saisissez le code..." />
+                        <button id="confirmUnlockBtn">Débloquer</button>
+                        <div id="modalError"></div>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+
+                  <!-------------------------------------------------------------------- radio --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-3">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Radio</h1>
+                    </div>
+
+                    <div class="content-radio">
+                      <button class="btn-radio" onclick="selectRadio('rock')"><img
+                          src="medias/radio/radio-rock.png"></button>
+                      <button class="btn-radio" onclick="selectRadio('electro')"> <img
+                          src="medias/radio/radio-electro.png"></button>
+                      <button class="btn-radio" onclick="selectRadio('rnb')"><img
+                          src="medias/radio/radio-urban.png"></button>
+                      <button class="btn-radio" onclick="selectRadio('pop')"><img
+                          src="medias/radio/radio-pop.png"></button>
+                    </div>
+                    <div class="content-info-radio color-inter-title">
+                      <p>Rock</p>
+                      <p>Eléctro</p>
+                      <p>R&B</p>
+                      <p>Pop</p>
+                    </div>
+                    <div class="content-radio">
+                      <button class="btn-radio" onclick="selectRadio('classique')"><img
+                          src="medias/radio/radio-harmonie.png"></button>
+                      <button class="btn-radio" onclick="selectRadio('jazz')"><img
+                          src="medias/radio/radio-jazz.png"></button>
+                      <button class="btn-radio" data-id="bloc-5"><img src="medias/radio/radio-playlist.png"></button>
+                      <button class="btn-radio"></button>
+                    </div>
+                    <div class="content-info-radio color-inter-title">
+                      <p>Classique</p>
+                      <p>Jazz</p>
+                      <p>Ma Playlist</p>
+                      <p></p>
+                    </div>
+
+                    <div class="content-next">
+                      <a href="game.html" class="next-btn">
+                        <p>suivant</p><i class="fa-solid fa-arrow-right"></i>
+                      </a>
+                    </div>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- plan --------------------------------------------------------------------->
+                  <div class="boxs hidden map-back" data-content="bloc-6">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                    </div>
+
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- conduite --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-14">
+                    <div class="content-title-page">
+                      <button data-id="bloc-2"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Conduite</h1>
+                    </div>
+
+                    <div class="slidebtn">
+
+                      <li>Assistance cond.<i class="car-color fa-solid fa-car"></i></li>
+
+                      <li>Mode conduite<i class="car-mode-color fa-solid fa-car-on"></i></li>
+
+                      <li>Climatisation<i class="car-color fa-solid fa-wind"></i></li>
+
+                      <li>Éclairage<i class="car-color fa-solid fa-lightbulb"></i></li>
+
+                      <li>Verouillage<i class="car-mode-color fa-solid fa-shield-halved"></i></li>
+
+                    </div>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- assistance --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-9">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Assistance</h1>
+                    </div>
+
+                    <h2 class="color-title">Contact</h2>
+
+                    <div class="content-social">
+                      <a href="https://github.com/margotDev77"><i class="fa-brands fa-square-github"></i></a>
+                      <a href="https://www.linkedin.com/in/margot-m-432123298/"><i
+                          class="fa-brands fa-linkedin"></i></a>
+                    </div>
+
+                    <div class="content-btn-urgence">
+                      <button class="btn-urgence"><i class="fa-solid fa-satellite"></i></button>
+                      <p class="color-inter-title">peut engager des frais supplémentaire</p>
+                    </div>
+
+                    <p class="color-txt">assistance 24/24h et 7j/7</p>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- app music --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-5">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Music</h1>
+                    </div>
+
+                    <div class="back">
+                      <div class="fixed-container">
+                        <div class="scrollable-content">
+
+                          <div class="content-info-album">
+                            <div class="content-size-img">
+                              <img src="medias/radio/radio-playlist.png">
+                            </div>
+                            <div class="bloc-info-album">
+                              <h2>Ma Playlist</h2>
+                            </div>
+                          </div>
+                          <ul class="list-music">
+                            <li class="content-line-music-title">
+                              <img src="medias/radio/radio-playlist.png">
+                              <div class="content-title-music">
+                                <span>
+                                  <h2 class="color-title">Little Bit Lighter</h2>
+                                  <h2>Charlotte Haining, BCee & Etherwood</h2>
+                                </span>
+                                <p>4:36</p>
+                              </div>
+                              <i class="color-music fa-solid fa-ellipsis"></i>
+                            </li>
+
+                            <li class="content-line-music-title">
+                              <img src="medias/radio/radio-playlist.png">
+                              <div class="content-title-music">
+                                <span>
+                                  <h2 class="color-title">Looking For Diversion (feat Lucy Kitchen)</h2>
+                                  <h2>Technimatic</h2>
+                                </span>
+                                <p>4:36</p>
+                              </div>
+                              <i class="color-music fa-solid fa-ellipsis"></i>
+                            </li>
+
+                            <li class="content-line-music-title">
+                              <img src="medias/radio/radio-playlist.png">
+                              <div class="content-title-music">
+                                <span>
+                                  <h2 class="color-title">Alright</h2>
+                                  <h2>Jain</h2>
+                                </span>
+                                <p>4:36</p>
+                              </div>
+                              <i class="color-music fa-solid fa-ellipsis"></i>
+                            </li>
+
+                            <li class="content-line-music-title">
+                              <img src="medias/radio/radio-playlist.png">
+                              <div class="content-title-music">
+                                <span>
+                                  <h2 class="color-title">Money</h2>
+                                  <h2>Pink Floyd</h2>
+                                </span>
+                                <p>6:22</p>
+                              </div>
+                              <i class="color-music fa-solid fa-ellipsis"></i>
+                            </li>
+
+                            <li class="content-line-music-title">
+                              <img src="medias/radio/radio-playlist.png">
+                              <div class="content-title-music">
+                                <span>
+                                  <h2 class="color-title">Lock It Up (feat. Anderson .Paak)</h2>
+                                  <h2>Eminem</h2>
+                                </span>
+                                <p>2:50</p>
+                              </div>
+                              <i class="color-music fa-solid fa-ellipsis"></i>
+                            </li>
+
+                            <li class="content-line-music-title">
+                              <img src="medias/radio/radio-playlist.png">
+                              <div class="content-title-music">
+                                <span>
+                                  <h2 class="color-title">Around The World</h2>
+                                  <h2>Daft Punk</h2>
+                                </span>
+                                <p>7:10</p>
+                              </div>
+                              <i class="color-music fa-solid fa-ellipsis"></i>
+                            </li>
+
+                            <li class="content-line-music-title">
+                              <img src="medias/radio/radio-playlist.png">
+                              <div class="content-title-music">
+                                <span>
+                                  <h2 class="color-title">Walk of Life</h2>
+                                  <h2>Dire Straits</h2>
+                                </span>
+                                <p>4:09</p>
+                              </div>
+                              <i class="color-music fa-solid fa-ellipsis"></i>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-------------------------------------------------------------------- app telephone --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-7">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Contact</h1>
+                    </div>
+
+                    <div class="fixed-container">
+                      <div class="scrollable-content">
+
+                        <div class="container-main">
+                          <div class="content-photo-profil">
+                            <img src="medias/icon-pro.png">
+                          </div>
+                          <div class="content-btn-contact">
+                            <button class="icon-contact-profil"><i class="fa-solid fa-comment"></i>
+                              <p>message</p>
+                            </button>
+                            <button class="icon-contact-profil"><i class="fa-solid fa-phone"></i>
+                              <p>appel</p>
+                            </button>
+                            <button class="icon-contact-profil"><i class="fa-solid fa-video"></i>
+                              <p>vidéo</p>
+                            </button>
+                            <button class="icon-contact-profil"><i class="fa-solid fa-envelope"></i>
+                              <p>e-mail</p>
+                            </button>
+                          </div>
+
+                          <div class="content-info-profil">
+                            <img src="medias/icon-pro.png">
+                            <div class="content-txt-info-profil">
+                              <h3 class="font-size-titre">Photo et affiche du contact</h3>
+                              <p class="color-title-interm">Contacts uniquement</p>
+                            </div>
+                            <i class="color-title-interm fa-solid fa-chevron-right"></i>
+                          </div>
+
+                          <div class="content-contact-profil">
+                            <h3 class="font-size-titre">iPhone</h3>
+                            <p class="font-size-courante color-blue-apple">07 86 ** ** ** </p>
+                          </div>
+
+                          <div class="content-contact-profil">
+                            <h3 class="font-size-titre">pro</h3>
+                            <p class="font-size-courante color-blue-apple">margot.michel222@gmail.com</p>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- apps --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-8">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Apps</h1>
+                    </div>
+
+
+                    <div class="bloc-point color-inter-title" id="loading">
+                      <h2>Connexion</h2>
+                      <span class="point"><sup>.</sup></span>
+                      <span class="point"><sup>.</sup></span>
+                      <span class="point"><sup>.</sup></span>
+                    </div>
+
+                    <div class="content-erreur-apps color-txt" id="errorMsg">
+                      <div class="content-connect">
+                        <h3>Connexion impossible !</h3>
+                        <p>Vous n'avez pas de compte</p>
+                        <button class="btn-erreur-charg color-inter-title" onclick="replayLoading()"><i
+                            class="fa-solid fa-arrow-rotate-left"></i></button>
+                      </div>
+                      <button class="btn-connect">se connecter</button>
+                    </div>
+
+                  </div>
+
+
+                  <!-------------------------------------------------------------------- pet app --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-15">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Fart Contact</h1>
+                    </div>
+
+                    <div class="content-fart">
+                      <img src="medias/fart.png" id="fartImage" alt="Image à cliquer">
+                      <audio id="fartAudio" src="medias/fart.wav"></audio>
+                    </div>
+
+                    <button data-id="bloc-8" class="btn-charge-son typo-main">télécharger d'autres sons</button>
+
+                  </div>
+
+
+                  <!-------------------------------------------------------------------- parametre --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-4">
+                    <div class="content-title-page">
+                      <button data-id="bloc-1"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Paramètre</h1>
+                    </div>
+
+                    <div class="fixed-container">
+                      <div class="scrollable-content">
+
+                        <div class="content-setting-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-setting color-inter-title" data-id="bloc-11"><span
+                                class="icon-setting color-general"><i class="fa-solid fa-gear"></i></span>
+                              <h2>Général</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-setting-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-setting color-inter-title" data-id="bloc-12"><span
+                                class="icon-setting color-reseau"><i class="wifi fa-solid fa-wifi"></i></span>
+                              <h2>Réseaux</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-setting-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-setting color-inter-title" data-id="bloc-13"><span
+                                class="icon-setting color-audio"><i class="fa-solid fa-ear-listen"></i></span>
+                              <h2>Audio</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-setting-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-setting color-inter-title"><span class="icon-setting color-access"><i
+                                  class="fa-solid fa-universal-access"></i></span>
+                              <h2>Accessibilité</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-setting-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-setting color-inter-title"><span
+                                class="icon-setting color-concentration"><i class="fa-solid fa-moon"></i></span>
+                              <h2>Concentration</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- general --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-11">
+                    <div class="content-title-page">
+                      <button data-id="bloc-4"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Général</h1>
+                    </div>
+
+                    <div class="fixed-container">
+                      <div class="scrollable-content">
+
+                        <div class="content-switch-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-switch">
+                              <h2 class="color-inter-title">Mise à jour automatique</h2>
+                              <div class="content-info-switch">
+                                <div class="switch-container">
+                                  <span class="switch-label color-txt">Auto</span>
+                                  <div class="switch2 blueOk switch-fake" data-ons="Non" data-offs="Auto">
+                                    <i class="icon2 color-blue fa-solid fa-download"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-switch-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-switch">
+                              <h2 class="color-inter-title">Thème</h2>
+                              <div class="content-info-switch">
+                                <div class="switch-container">
+                                  <span class="switch-label3 color-txt">Sombre</span>
+                                  <div class="switch3 blueOk switch-fake" data-ons="Claire" data-offs="Sombre">
+                                    <i class="icon3 color-blue fa-solid fa-circle-half-stroke"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-switch-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-switch color-inter-title">
+                              <h2>Confidentialité et sécurité</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-switch-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-switch color-inter-title">
+                              <h2>Informations</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-switch-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-switch color-inter-title">
+                              <h2>Date et heure</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-switch-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-switch color-inter-title">
+                              <h2>Langue et région</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="content-switch-btn">
+                          <ul class="list-switch">
+                            <li class="border-li-switch color-inter-title">
+                              <h2>Police</h2>
+                              <div class="content-info-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- reseaux --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-12">
+                    <div class="content-title-page">
+                      <button data-id="bloc-4"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Réseaux</h1>
+                    </div>
+
+                    <div class="content-switch-reseau">
+
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Localisation</h2>
+                            <div class="content-info-switch">
+                              <div class="switch-container">
+                                <span class="switch-label color-txt">Oui</span>
+                                <div class="switch2 blueOk switch-location" data-ons="Non" data-offs="Oui">
+                                  <i class="icon2 color-blue fa-solid fa-location-arrow"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Bluetooth</h2>
+                            <div class="content-info-switch">
+                              <div class="switch-container">
+                                <span class="switch-label color-txt">Non</span>
+                                <div class="switch blue switch-bluetooth" data-on="Oui" data-off="Non">
+                                  <i class="icon color-blue fa-brands fa-bluetooth-b"></i>
+                                </div>
+                              </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Partage de connexion</h2>
+                            <div class="content-info-switch">
+                              <div class="switch-container">
+                                <span class="switch-label color-txt">Non</span>
+                                <div class="switch blue switch-link" data-on="Oui" data-off="Non">
+                                  <i class="icon color-blue fa-solid fa-link"></i>
+                                </div>
+                              </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Appel d'urgence</h2>
+                            <div class="content-info-switch">
+                              <div class="switch-container">
+                                <span class="switch-label color-txt">Oui</span>
+                                <div class="switch2 redOk switch-fake" data-ons="Non" data-offs="Oui">
+                                  <i class="icon2 color-red fa-solid fa-satellite"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+
+
+                    </div>
+
+                  </div>
+
+                  <!-------------------------------------------------------------------- audio --------------------------------------------------------------------->
+                  <div class="boxs hidden" data-content="bloc-13">
+                    <div class="content-title-page">
+                      <button data-id="bloc-4"><i class="color-title fa-solid fa-angle-left"></i></button>
+                      <h1 class="color-title">Audio</h1>
+                    </div>
+
+                    <div class="content-switch-reseau">
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Effets sonore</h2>
+                            <div class="content-info-switch">
+                              <div class="switch-container">
+                                <span class="switch-label color-txt">Non</span>
+                                <div class="switch2 blueOk switch-fake" data-ons="Oui" data-offs="Non">
+                                  <i class="icon2 color-blue fa-solid fa-volume-off"></i>
+                                </div>
+                              </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Notifications</h2>
+                            <div class="content-info-switch">
+                              <div class="switch-container">
+                                <span class="switch-label color-txt">Oui</span>
+                                <div class="switch blue switch-fake" data-on="Non" data-off="Oui">
+                                  <i class="icon color-blue fa-solid fa-bell"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Volume</h2>
+
+                            <div class="content-progressbar-sound">
+                              <i class="fa-solid fa-volume-off"></i>
+                              <div class="progress-container" id="progress-container">
+                                <div class="progress-barSound" id="progress-barSound"></div>
+                                <div class="sliders" id="sliders"></div>
+                                <div id="soundLevel"></div>
+                              </div>
+                              <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div id="floatingElement"></div>
+
+
+                      <div class="content-switch-btn">
+                        <ul class="list-switch">
+                          <li class="border-li-switch">
+                            <h2 class="color-inter-title">Audio Spacial</h2>
+                            <div class="content-info-switch">
+                              <div class="switch-container">
+                                <span class="switch-label color-txt">Oui</span>
+                                <div class="switch blue switch-fake" data-on="Non" data-off="Oui">
+                                  <i class="icon color-blue fa-solid fa-ear-listen"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </section>
+
+            </div>
+          </section>
+
+        </main>
+
+      </div>
+
+
+      <section class="content-btn-start">
+
+        <button class="btn-start-back-deco margin-ext">
+          <div class="btn-start-deco">S</div>
+        </button>
+
+        <button class="btn-start-back-deco margin-middle">
+          <div class="btn-start-deco">R</div>
+        </button>
+
+
+        <button class="btn-start-back"><a href="game.html">
+            <div class="btn-start">
+              <p>GAME</p><img src="medias/aston-logo.png">
+              <p>START</p>
+            </div>
+          </a>
+        </button>
+
+        <button class="btn-start-back-deco margin-middle">
+          <div class="btn-start-deco">N</div>
+        </button>
+
+        <button class="btn-start-back-deco margin-ext">
+          <div class="btn-start-deco">D</div>
+        </button>
+
+      </section>
+
+      <div class="content-btn-warning">
+        <button class="btn-warning-back-deco">
+          <div class="btn-warning-deco"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        </button>
+
+      </div>
+
+      <div class="content-btn-tab-bord">
+        <button class="btn-tab-bord radius-left"><img src="medias/siege-left.png"></button>
+        <button class="btn-tab-bord-temp"><i class="fa-solid fa-minus color-cold"></i> OFF <i
+            class="fa-solid fa-plus color-hot"></i></button>
+        <button class="btn-tab-bord"><img src="medias/volant.png"></button>
+        <button class="btn-tab-bord"><img src="medias/clim.png"></button>
+        <button class="btn-tab-bord">AUTO</button>
+        <button class="btn-tab-bord"><img src="medias/ventil-front.png"></button>
+        <button class="btn-tab-bord"><img src="medias/parebrise.png"></button>
+        <button class="btn-tab-bord"><img src="medias/parebrise-rect.png"></button>
+        <button class="btn-tab-bord">A/C</button>
+        <button class="btn-tab-bord-temp"><i class="fa-solid fa-minus color-cold"></i> OFF <i
+            class="fa-solid fa-plus color-hot"></i></button>
+        <button class="btn-tab-bord radius-right"><img src="medias/siege-right.png"></button>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-------------------------------------------------------------------- video intro --------------------------------------------------------------------->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let video = document.getElementById("introVideo");
+      let videoContainer = document.querySelector(".video-container");
+      let mainContainer = document.querySelector(".containerBody");
+      let passeBtn = document.getElementById("passeBtn");
+
+      function hideIntroAndScroll() {
+        videoContainer.style.display = "none";
+        mainContainer.style.display = "block";
+
+        // lance scroll
+        scrollToBottomSlowly(3200);
+      }
+
+      // quand video fini
+      video.addEventListener("ended", hideIntroAndScroll);
+
+      // clique sur passer
+      passeBtn.addEventListener("click", function () {
+        video.pause(); // arret video
+        hideIntroAndScroll();
+      });
+
+      // force apres 40s
+      setTimeout(() => {
+        if (videoContainer.style.display !== "none") {
+          video.pause();
+          hideIntroAndScroll();
+        }
+      }, 40500);
+    });
+
+    function scrollToBottomSlowly(duration = 3000) {
+      const start = window.scrollY;
+      const end = document.body.scrollHeight - window.innerHeight;
+      const distance = end - start;
+      const startTime = performance.now();
+
+      function scrollStep(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeInOut = progress < 0.5
+          ? 2 * progress * progress
+          : -1 + (4 - 2 * progress) * progress;
+
+        window.scrollTo(0, start + distance * easeInOut);
+
+        if (elapsed < duration) {
+          requestAnimationFrame(scrollStep);
+        }
+      }
+
+      requestAnimationFrame(scrollStep);
+    }
+  </script>
+
+  <!-------------------------------------------------------------------- heure et date --------------------------------------------------------------------->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const clockElement = document.getElementById("clock");
+
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const currentTime = `${hours}:${minutes}`;
+        clockElement.textContent = currentTime;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    });
+
+
+    /**************************** date ****************************/
+
+    function afficherDateHome() {
+      const joursSemaine = ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."];
+      const aujourdHui = new Date();
+      const jourSemaine = joursSemaine[aujourdHui.getDay()];
+      const jour = aujourdHui.getDate();
+      const jourFormate = jour < 10 ? '0' + jour : jour;
+      const dateTexte = `${jourSemaine}`;
+      const jourTexte = `${jourFormate}`;
+      document.getElementById("date").innerText = dateTexte;
+      document.getElementById("jour").innerText = jourTexte;
+    }
+  </script>
+
+  <!-------------------------------------------------------------------- bloc screen --------------------------------------------------------------------->
+
+  <script>
+
+    'use strict';
+    const slidebar = document.querySelectorAll("[data-id^='bloc-']");
+    const containerBoxs = document.querySelectorAll("[data-content^='bloc-']");
+
+    slidebar.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        const id = tab.getAttribute('data-id');
+
+        if (tab.tagName === 'LI') {
+          slidebar.forEach(function (el) {
+            if (el.tagName === 'LI') {
+              el.classList.remove('active');
+            }
+          });
+          tab.classList.add('active');
+        }
+
+        containerBoxs.forEach(function (boxs) {
+          if (boxs.getAttribute('data-content') === id) {
+            boxs.classList.remove('hidden');
+            boxs.classList.add('apparent');
+          } else {
+            boxs.classList.add('hidden');
+            boxs.classList.remove('apparent');
+          }
+        });
+      });
+    });
+
+  </script>
+
+  <!-------------------------------------------------------------------- clavier pseudo --------------------------------------------------------------------->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const textAreas = document.querySelectorAll("[data-textarea-id]");
+      const keys = document.querySelectorAll(".key");
+      const shiftKey = document.querySelector(".shift");
+
+      let isShiftActive = false;
+      let activeTextArea = null;
+
+      textAreas.forEach(textArea => {
+        const id = textArea.dataset.id;
+        textArea.value = localStorage.getItem(`savedText_${id}`) || "";
+
+        textArea.addEventListener("focus", () => {
+          activeTextArea = textArea;
+        });
+
+        textArea.addEventListener("input", () => {
+          localStorage.setItem("savedText", textArea.value);
+        });
+      });
+
+
+      keys.forEach(key => {
+        key.addEventListener("click", () => {
+          if (!activeTextArea) return;
+
+          let keyValue = key.textContent;
+
+          if (key.classList.contains("shift")) {
+            isShiftActive = !isShiftActive;
+            shiftKey.classList.toggle("active", isShiftActive);
+            return;
+          }
+
+          if (key.classList.contains("space")) {
+            activeTextArea.value += " ";
+          } else if (key.classList.contains("delete")) {
+            activeTextArea.value = activeTextArea.value.slice(0, -1);
+          } else {
+            activeTextArea.value += isShiftActive ? keyValue.toUpperCase() : keyValue.toLowerCase();
+          }
+
+
+          localStorage.setItem(`savedText_${activeTextArea.dataset.id}`, activeTextArea.value);
+        });
+      });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const okBtn = document.querySelector(".ok-btn");
+      const textArea = document.querySelector(".textArea");
+      const textDisplay = document.getElementById("text-display");
+
+      function updateTextDisplay(text) {
+        if (text.trim() === "") {
+          textDisplay.textContent = textArea.placeholder;
+        } else {
+          textDisplay.textContent = text;
+        }
+      }
+
+      textDisplay.textContent = textArea.placeholder;
+
+      okBtn.addEventListener("click", () => {
+        const text = textArea.value.trim();
+
+        updateTextDisplay(text);
+        localStorage.setItem("savedText", text);
+        textArea.value = '';
+      });
+    });
+
+  </script>
+
+  <!-------------------------------------------------------------------- switch button --------------------------------------------------------------------->
+
+  <script>
+
+    function toggleHeaderIcon(iconId, show) {
+      const icon = document.getElementById(iconId);
+      if (icon) icon.style.display = show ? "inline-block" : "none";
+    }
+
+    document.querySelectorAll(".switch-location").forEach(switchButton => {
+      const label = switchButton.previousElementSibling;
+      const textOns = switchButton.dataset.ons;
+      const textOffs = switchButton.dataset.offs;
+
+      const isDesactive = switchButton.classList.contains("desactive");
+      label.textContent = isDesactive ? textOns : textOffs;
+      toggleHeaderIcon("icon-location", !isDesactive);
+
+      switchButton.addEventListener("click", () => {
+        switchButton.classList.toggle("desactive");
+        const nowDesactive = switchButton.classList.contains("desactive");
+        label.textContent = nowDesactive ? textOns : textOffs;
+        toggleHeaderIcon("icon-location", !nowDesactive);
+      });
+    });
+
+    document.querySelectorAll(".switch-bluetooth").forEach(switchButton => {
+      const label = switchButton.previousElementSibling;
+      const textOn = switchButton.dataset.on;
+      const textOff = switchButton.dataset.off;
+
+      const isActive = switchButton.classList.contains("active");
+      label.textContent = isActive ? textOn : textOff;
+      toggleHeaderIcon("icon-bluetooth", isActive);
+
+      switchButton.addEventListener("click", () => {
+        switchButton.classList.toggle("active");
+        const nowActive = switchButton.classList.contains("active");
+        label.textContent = nowActive ? textOn : textOff;
+        toggleHeaderIcon("icon-bluetooth", nowActive);
+      });
+    });
+
+    document.querySelectorAll(".switch-link").forEach(switchButton => {
+      const label = switchButton.previousElementSibling;
+      const textOn = switchButton.dataset.on;
+      const textOff = switchButton.dataset.off;
+
+      const isActive = switchButton.classList.contains("active");
+      label.textContent = isActive ? textOn : textOff;
+      toggleHeaderIcon("icon-link", isActive);
+
+      switchButton.addEventListener("click", () => {
+        switchButton.classList.toggle("active");
+        const nowActive = switchButton.classList.contains("active");
+        label.textContent = nowActive ? textOn : textOff;
+        toggleHeaderIcon("icon-link", nowActive);
+      });
+    });
+
+
+    const switchesFake = document.querySelectorAll(".switch-fake");
+    switchesFake.forEach(switchButton => {
+
+      switchButton.addEventListener("click", () => {
+
+        switchButton.classList.toggle("desactive");
+
+        const label = switchButton.previousElementSibling;
+        const textOns = switchButton.dataset.ons;
+        const textOffs = switchButton.dataset.offs;
+
+        if (switchButton.classList.contains("desactive")) {
+          label.textContent = textOns;
+        } else {
+          label.textContent = textOffs;
+        }
+      });
+
+    });
+
+    document.querySelectorAll(".switch-fake").forEach(switchButton => {
+      const label = switchButton.previousElementSibling;
+      const textOn = switchButton.dataset.on;
+      const textOff = switchButton.dataset.off;
+
+      const isActive = switchButton.classList.contains("active");
+      label.textContent = isActive ? textOn : textOff;
+
+      switchButton.addEventListener("click", () => {
+        switchButton.classList.toggle("active");
+        const nowActive = switchButton.classList.contains("active");
+        label.textContent = nowActive ? textOn : textOff;
+      });
+    });
+
+
+  </script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const body = document.body;
+      const switchBttn = document.querySelector('.switch3');
+      const label = document.querySelector('.switch-label3');
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          body.classList.add('dark-mode');
+          label.textContent = switchBttn.dataset.ons || 'Claire';
+        } else {
+          body.classList.remove('dark-mode');
+          label.textContent = switchBttn.dataset.offs || 'Sombre';
+        }
+      }
+
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      applyTheme(savedTheme);
+
+      switchBttn.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark-mode');
+        const theme = isDark ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+      });
+    });
+  </script>
+
+
+  <!-------------------------------------------------------------------- message erreur apps --------------------------------------------------------------------->
+
+  <script>
+    function startLoading() {
+      const loading = document.getElementById("loading");
+      const errorMsg = document.getElementById("errorMsg");
+
+      loading.style.display = "flex";
+      errorMsg.style.display = "none";
+
+      setTimeout(() => {
+        loading.style.display = "none";
+        errorMsg.style.display = "flex";
+      }, 2000);
+    }
+
+    function replayLoading() {
+      startLoading();
+    }
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        const target = mutation.target;
+        if (
+          target.dataset.content === "bloc-8" &&
+          !target.classList.contains("hidden") &&
+          target.classList.contains("apparent")
+        ) {
+          startLoading();
+        }
+      });
+    });
+
+    document.querySelectorAll(".boxs").forEach((el) => {
+      observer.observe(el, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    });
+  </script>
+
+  <!-------------------------------------------------------------------- range sound --------------------------------------------------------------------->
+
+  <script>
+    const progressBarSound = document.getElementById("progress-barSound");
+    const sliders = document.getElementById("sliders");
+    const progressContainer = document.getElementById("progress-container");
+    const soundLevel = document.getElementById("soundLevel");
+    const floatingElement = document.getElementById("floatingElement");
+
+    let isDragging = false;
+    let currentVolume = 50;
+
+    function updateVolumeUI(showPopup = true) {
+      let percent = currentVolume + "%";
+      progressBarSound.style.width = percent;
+      sliders.style.left = percent;
+      if (soundLevel) soundLevel.style.height = percent;
+
+      if (showPopup) showFloatingElement();
+    }
+
+    function showFloatingElement() {
+      floatingElement.classList.add('active');
+      setTimeout(() => {
+        floatingElement.classList.remove('active');
+      }, 1000);
+    }
+
+    function changeVolume(amount) {
+      currentVolume += amount;
+
+      if (currentVolume < 0) currentVolume = 0;
+      if (currentVolume > 100) currentVolume = 100;
+
+      updateVolumeUI();
+    }
+
+    progressContainer.addEventListener("click", (e) => {
+      const rect = progressContainer.getBoundingClientRect();
+      let offsetX = e.clientX - rect.left;
+      currentVolume = Math.round((offsetX / rect.width) * 100);
+      updateVolumeUI();
+    });
+
+    sliders.addEventListener("mousedown", () => {
+      isDragging = true;
+      document.addEventListener("mousemove", updateDrag);
+    });
+
+    document.addEventListener("mouseup", () => {
+      if (isDragging) {
+        isDragging = false;
+        document.removeEventListener("mousemove", updateDrag);
+      }
+    });
+
+    function updateDrag(e) {
+      if (!isDragging) return;
+      const rect = progressContainer.getBoundingClientRect();
+      let offsetX = e.clientX - rect.left;
+      currentVolume = Math.round((offsetX / rect.width) * 100);
+      currentVolume = Math.max(0, Math.min(currentVolume, 100));
+      updateVolumeUI();
+    }
+
+    function updateVolumeUI(showPopup = true) {
+      let percent = currentVolume + "%";
+      progressBarSound.style.width = percent;
+      sliders.style.left = percent;
+      soundLevel.style.height = percent;
+
+      if (showPopup) {
+        showFloatingElement();
+      }
+    }
+
+    updateVolumeUI(false);
+
+  </script>
+
+  <!-------------------------------------------------------------------- pet sound --------------------------------------------------------------------->
+
+  <script>
+    const image = document.getElementById('fartImage');
+    const audio = document.getElementById('fartAudio');
+
+    image.addEventListener('click', () => {
+      audio.currentTime = 0;
+      audio.play();
+    });
+  </script>
+
 </body>
+
 </html>

@@ -1,0 +1,276 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+
+/**********************************/
+/*   Car container   */
+/**********************************/
+.car {
+    width: 100%;
+    display: flex;
+}
+
+
+/**********************************/
+/*         Car background         */
+/**********************************/
+
+/* Car container (background) */
+.car__image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: url('../medias/car_background.svg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.car__image.on {
+    animation: scrolling 20s linear infinite;
+}
+
+@keyframes scrolling {
+    100% {
+        background-position: 0 -1000%;
+    }
+}
+
+/**********************************/
+/*           Nitro         */
+/**********************************/
+
+.car__image.nitro {
+    animation: nitro 15s linear infinite;
+}
+
+@keyframes nitro {
+    100% {
+        background-position: 0 -1000%;
+    }
+}
+
+.car__image svg.nitro {
+    transition: transform 0.1s ease-out;
+    transform: translateX(20px) scale(1.05);
+}
+
+
+/**********************************/
+/*           Car parts            */
+/**********************************/
+
+/* Car SVG image */
+.car__image svg {
+    width: 22%;
+    display: block;
+    position: relative;
+    top: 55%;
+    left: 51%;
+    z-index: 10;
+    transition: transform 0.4s ease-out;
+}
+
+.car__image svg.on {
+    animation: car_moving 0.2s 1.1s infinite;
+}
+
+@keyframes car_moving {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(0.2px);
+    }
+
+    50% {
+        transform: translate(0);
+    }
+
+    75% {
+        transform: translate(-0.2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+
+.car__image svg.left {
+    transform: translateX(-107%);
+}
+
+.car__image svg.right {
+    transform: translateX(0);
+}
+
+/* Headlights faiseau */
+path[id*="headlight_faiseau"], ellipse[id*="headlight_faiseau"] {
+    opacity: 0;
+}
+
+path[id*="headlight_faiseau"].on, ellipse[id*="headlight_faiseau"].on {
+    opacity: 1;
+}
+
+/* led */
+path[id*="led"] {
+   fill: rgb(173, 181, 188);
+}
+
+path[id*="led"].on {
+    fill: aliceblue;
+}
+
+/* Taillights */
+path[id*="taillight"] {
+    fill: rgb(162, 38, 38);
+}
+
+path[id*="taillight"].on {
+    fill: rgb(255, 0, 0);
+}
+
+/* Indicators */
+path[id*="indicator"] {
+   opacity: 0;
+}
+
+path[id*="indicator"].on {
+    opacity: 1;
+    animation: indicator_blinking 1s infinite;
+}
+
+@keyframes indicator_blinking {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+        fill: rgb(255, 128, 0);
+    }
+
+    60% {
+        opacity: 1;
+        fill: rgb(255, 128, 0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Indicators back*/
+path[id*="indicator_back"] {
+    fill: rgb(162, 38, 38);
+}
+
+path[id*="indicator_back"].on {
+    animation: indicator_blinking-back 1s infinite;
+}
+
+@keyframes indicator_blinking-back {
+    0% {
+        fill: rgb(162, 38, 38);
+    }
+
+    40% {
+        fill: rgb(255, 128, 0);
+    }
+
+    60% {
+        fill: rgb(255, 128, 0);
+    }
+
+    100% {
+        fill: rgb(162, 38, 38);
+    }
+}
+
+/* Indicators side*/
+/* path[id*="indicator_side"] {
+    fill: rgb(173, 181, 188);
+}
+
+path[id*="indicator_side"].on {
+    animation: indicator_blinking-side 1s infinite;
+} */
+
+path[id*="indicator_side"],
+ellipse[id*="indicator_side"] {
+    fill: rgb(173, 181, 188);
+}
+
+path[id*="indicator_side"].on,
+ellipse[id*="indicator_side"].on {
+    animation: indicator_blinking-side 1s infinite;
+}
+
+@keyframes indicator_blinking-side {
+    0% {
+        fill: rgb(173, 181, 188);
+    }
+
+    40% {
+        fill: rgb(255, 128, 0);
+    }
+
+    60% {
+        fill: rgb(255, 128, 0);
+    }
+
+    100% {
+        fill: rgb(173, 181, 188);
+    }
+}
+
+/* Indicators shadow*/
+/* ellipse[id*="indicator_shadow"] {
+    opacity: 0;
+}
+
+ellipse[id*="indicator_shadow"].on {
+    animation: indicator_blinking-shadow 1s infinite;
+}
+
+@keyframes indicator_blinking-shadow {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+       opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} */
+
+
+.obstacle {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 0;
+    pointer-events: none;
+      filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+  }
+  
+#car-container {
+    position: relative;
+    width: 100%;
+    /* height: 400px; */
+    overflow: hidden;
+    border: 1px solid #000;
+}
