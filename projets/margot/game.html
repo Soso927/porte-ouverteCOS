@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="atomic.css">
+  <link rel="stylesheet" href="interface.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="content-nom-profil"><a href="index.html">
+        <i class="fa-solid fa-circle-user"></i></a>
+      <div class="typo-main" id="display-text-other-page">
+      </div>
+    </div>
+    <section class="column-side">
+      <div class="car__controls">
+        <button class="btn-game btn-circle controls__lights" id="up"><img src="medias/headlight-icon.png"></button>
+        <button class="btn-game btn-circle controls__left-indicators" id="left"><i
+            class="cligno fa-solid fa-circle-left"></i></button>
+        <button class="btn-game btn-circle controls__klaxon" id="center"><i
+            class="klaxon-color fa-solid fa-bullhorn"></i></button>
+        <button class="btn-game btn-circle controls__right-indicators" id="right"><i
+            class="cligno fa-solid fa-circle-right"></i></button>
+        <button class="btn-game btn-circle controls__hazard-lights" id="down"><i
+            class="warning fa-solid fa-triangle-exclamation"></i></button>
+      </div>
+
+      <div class="content-radio">
+        <h2 class="typo-title"><span id="stationName">nom radio</span></h2>
+
+        <div class="content-line-radio">
+          <img id="stationImage" src="" alt="Visuel de la station">
+          <audio id="radioPlayer" autoplay></audio>
+          <div class="content-title-radio typo-main"><span id="trackTitle">titre</span><span
+              id="trackArtist">artiste</span></div>
+        </div>
+
+        <div id="customControls">
+          <div class="content-media-radio">
+            <button onclick="prevStation()"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <button id="playPauseBtn"><i class="fa-solid fa-circle-play"></i></button>
+            <button onclick="nextStation()"><i class="fa-solid fa-circle-chevron-right"></i></button>
+          </div>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+    </section>
+
+    <section class="column-article">
+      <div class="car">
+        <div id="car-container" class="car__image">
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="nitro-effect"></div> -->
+
+    <section class="column-side">
+      <div class="content-pause-btn">
+        <button class="btn-pause typo-main" id="pause-btn">Start</button>
+        <button class="color-mode" id="theme-toggle"><i id="theme-icon"
+            class="fa-solid fa-circle-half-stroke"></i></button>
+      </div>
+
+
+      <div class="car__controls">
+        <button class="btn-game btn-rect controls__driving" id="up"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="btn-game btn-rect controls__move_left" id="left"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="btn-game btn-circle controls__nitro btn-nitro-back" id="center">
+          <div class="btn-nitro"><i class="fa-solid fa-bolt-lightning"></i></div>
+        </button>
+        <button class="btn-game btn-rect controls__move_right" id="right"><i
+            class="fa-solid fa-arrow-right"></i></button>
+        <button class="btn-game btn-rect controls__move_back" id="down"><i class="fa-solid fa-arrow-down"></i></button>
+        <div class="content-btn-keyboard">
+          <button class="keyboard-btn open-btn"><i class="fa-solid fa-keyboard"></i></button>
+        </div>
+
+      </div>
+
+      <div id="timer">Temps :</div>
+
+      <div id="feu-depart" class="feu-depart">
+        <div class="lumiere rouge"></div>
+        <div class="lumiere orange"></div>
+        <div class="lumiere verte"></div>
+      </div>
+
+      <div id="countdown" class="countdown"></div>
+
+    </section>
+  </main>
+
+  <!--------------------------------------------------- popup ------------------------------->
+
+  <div class="popup-overlay">
+    <div class="popup-content typo-main">
+      <div class="content-btn-navigation">
+        <h1 class="typo-title">Navigation</h1> <button class="button-close fillIn"><i
+            class="fa-solid fa-circle-xmark"></i></button>
+      </div>
+      <div class="container-info-btn">
+        <div class="scrollable-content">
+          <ul class="list">
+
+            <li>
+              <h2 class="typo-title">Avancer</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/arrow-up-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/arrow-up-windows.png">
+                </span></div>
+            </li>
+
+            <li>
+              <h2 class="typo-title">Tourner à gauche</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/arrow-left-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/arrow-left-windows.png">
+                </span></div>
+            </li>
+
+            <li>
+              <h2 class="typo-title">Tourner à droite</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/arrow-right-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/arrow-right-windows.png">
+                </span></div>
+            </li>
+
+            <li>
+              <h2 class="typo-title nitro-background">Nitro</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/shift-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/shift-windows.png">
+                </span></div>
+            </li>
+
+            <li>
+              <h2 class="typo-title klaxon-background">Klaxonner</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/espace-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/espace-windows.png">
+                </span></div>
+            </li>
+
+
+            <li>
+              <h2 class="typo-title phare-av-background">Phare avant</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/z-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/z-windows.png">
+                </span></div>
+            </li>
+
+            <li>
+              <h2 class="typo-title cligno-background">Clignotant gauche</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/q-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/q-windows.png">
+                </span></div>
+            </li>
+
+            <li>
+              <h2 class="typo-title cligno-background">Clignotant droit</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/d-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/d-windows.png">
+                </span></div>
+            </li>
+
+            <li>
+              <h2 class="typo-title warning-background">Warning</h2>
+              <div class="content-media-clavier"><span>
+                  <p>sur mac</p><img src="medias/touche-clavier/s-mac.png">
+                </span> <span>
+                  <p>sur windows</p><img src="medias/touche-clavier/s-windows.png">
+                </span></div>
+            </li>
+
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div id="game-over-popup" class="game-over-popup">
+    <div class="popup-content-over typo-main">
+      <div class="typo-title" id="game-over-message"></div>
+      <button id="rejouer-btn"><i class="fa-solid fa-rotate-left"></i>Rejouer</button>
+      <button id="viePlus-btn"><i class="fa-solid fa-heart-circle-plus"></i>Acheter des vies</button>
+      <button id="quitter-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i>Quitter</button>
+    </div>
+  </div>
+
+  <audio id="horn-sound" src="medias/klaxon-sound.mp3"></audio>
+  <audio id="cligno-left" src="medias/clignotant-sound.mp3"></audio>
+  <audio id="nitro-sound" src="medias/acceleration-sound.mp3"></audio>
+  <audio id="start-sound" src="medias/start-sound.mp3"></audio>
+
+
+
+  <script>
+    /************************************** dark mode / light mode **************************************/
+
+    let activeItem = null;
+    let imageBack = null;
+
+    function isDarkMode() {
+      return document.body.classList.contains("dark-mode");
+    }
+
+    function getImageForTheme(item) {
+      return isDarkMode()
+        ? item.getAttribute("data-image-dark")
+        : item.getAttribute("data-image-light");
+    }
+
+    function updateBackImageOnThemeChange() {
+      if (activeItem && imageBack) {
+        imageBack.setAttribute("href", getImageForTheme(activeItem));
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+      }
+
+      toggleButton.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateBackImageOnThemeChange();
+      });
+    });
+  </script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const displayOther = document.getElementById("display-text-other-page");
+      const savedText = localStorage.getItem("savedText");
+
+      if (displayOther && savedText) {
+        displayOther.textContent = savedText;
+      }
+    });
+
+  </script>
+
+  <script>
+    var openBtn = document.querySelector(".open-btn");
+    var overlay = document.querySelector(".popup-overlay");
+    var closeBtn = document.querySelector(".fillIn");
+
+    openBtn.addEventListener("click", function () {
+      overlay.style.display = "flex";
+      document.body.classList.add("no-scroll");
+    });
+
+    overlay.addEventListener("click", (event) => {
+
+      if (event.target === overlay) {
+        overlay.style.display = "none";
+        document.body.classList.remove("no-scroll");
+      }
+
+    });
+
+    closeBtn.addEventListener("click", function () {
+      overlay.style.display = "none";
+      document.body.classList.remove("no-scroll");
+    });
+
+  </script>
+
+  <script>
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const volumeSlider = document.getElementById('volumeSlider');
+
+    playPauseBtn.addEventListener('click', () => {
+      if (player.paused) {
+        player.play();
+        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
+      } else {
+        player.pause();
+        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
+      }
+    });
+
+    volumeSlider.addEventListener('input', () => {
+      player.volume = volumeSlider.value;
+    });
+  </script>
+</body>
+
+</html>

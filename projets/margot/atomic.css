@@ -1,0 +1,100 @@
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.typo-main {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1vh;
+}
+
+.typo-title {
+  font-family: "Allerta Stencil", sans-serif;
+}
+
+
+.color-title {
+  color: #ffffff;
+}
+
+.color-inter-title {
+  color: #adadad;
+}
+
+.color-txt {
+  color: #ebeff3;
+}
+
+.color-main {
+  color: #ebeff3ca;
+}
+
+
+
+
+/********************* color interface ****************/
+
+:root {
+  --bg-color: #252525;
+  --color-light: #ebeff3;
+  --color-dark-light: #404042;
+  --color-interm: #363538;
+  --color-dark: #1d1c21;
+  --color-accent: #00dfd6;
+  /****************** manette *******************/
+  --back-manette: radial-gradient(#2d2d2d 50%, #3a3a3a 80%);
+  --border-back: #1b1919;
+/****************** back radio *******************/
+  --back-opacite :#ffffff25;
+  /****************** btn rect *******************/
+  --txt-color: #fff;
+  --back-btn-rect: #3a3a3a;
+  --border-btn-rect: #222;
+  --box-shadow-rect: inset 0 2px 5px rgba(0, 0, 0, 0.5),
+    0 3px 5px rgba(0, 0, 0, 0.4);
+  /****************** btn circle *******************/
+--border-btn-circle: #333;
+--gradient-btn-circle: radial-gradient(circle at 30% 30%, #555, #222);
+--box-shadow-circle: 0 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+#theme-toggle {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+body.dark-mode {
+  --bg-color: #dbdfe3;
+  /****************** manette *******************/
+  --back-manette: radial-gradient(#c9c9c9 50%, #ebeff3 80%);
+  --border-back: #bbbbbb;
+  /****************** back radio *******************/
+  --back-opacite :#76757525;
+  /****************** btn rect *******************/
+  --txt-color: #404042;
+  --back-btn-rect: #e0e0e0;
+  --border-btn-rect: #999;
+  --box-shadow-rect: inset 0 2px 5px rgba(130, 130, 130, 0.5),
+    0 3px 5px rgba(149, 149, 149, 0.4);
+  /****************** btn circle *******************/
+  --border-btn-circle: #aaa;
+  --gradient-btn-circle: radial-gradient(circle at 30% 30%, #dddddd, #b5b5b5);
+  --box-shadow-circle : 0 3px 8px rgba(0, 0, 0, 0.2);
+
+}
