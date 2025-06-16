@@ -1,14 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blanche Assiste</title>
 
-    <title>COS 2025 - Page principale</title>
+  <link rel="stylesheet" href="style/style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Fleur+De+Leah&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <header id="defilement_header">
+    <a href="../../index.html" class="button lightwave"><span>Accueil</span></a>
+    <a href="#ancreLieux" class="button lightwave"><span>Lieux</span></a>
+    <a href="#ancreContact" class="button lightwave"><span>Contact</span></a>
+  </header>
 
-    
+  <main>
+    <section class="presentation section-transparente" id="ancrePresent">
+      <div class="textePresent">
+        <h1>Nadia, 20 ans d'expérience pour le bien-être de vos proches</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. [...] <br> SITE EN COURS DE DEV</p>
+      </div>
+    </section>
+
+    <section class="carrousel">
+      <div class="slider">
+        <div class="slides">
+          <img src="assets/building-6011756_1280.jpg" alt="Présentation 1" />
+          <img src="assets/building-9639806_1280.jpg" alt="Présentation 2" />
+          <img src="assets/urban-fashion-9639853_1280.jpg" alt="Présentation 3" />
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="lieux section-transparente" id="ancreLieux">
+      <h1>Zone d'action et étude selon vos besoins</h1>
+      <div id="map"></div>
+    </section>
+
+    <section class="contact section-transparente" id="ancreContact">
+      <h1>Contactez-moi</h1>
+      <p>Pour tout renseignement, n'hésitez pas à me contacter :</p>
+      <p>Tél : <a href="tel:0606060606">0606060606</a></p>
+      <p>Mail : <a href="mailto:blancheSTE@test.fr">blancheSTE@test.fr</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="reseauSociaux">
+      <a href="https://www.facebook.com/?locale=fr_FR" target="_blank" class="textAligner">
+        <img src="assets/icons/icons8-facebook-nouveau-64.png" alt="Facebook" /> Blanche Nadia
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" class="textAligner">
+        <img src="assets/icons/icons8-instagram-64.png" alt="Instagram" /> Ste Blanche Care
+      </a>
+      <a href="https://twitter.com" target="_blank" class="textAligner">
+        <img src="assets/icons/icons8-twitterx-64.png" alt="Twitter" /> Ste Blanche Care
+      </a>
+    </div>
+    <div class="credit">
+      <a href="https://icons8.com/icon/118501/facebook" target="_blank">Facebook</a> icône par <a href="https://icons8.com" target="_blank">Icons8</a>
+    </div>
+  </footer>
 </body>
 </html>
