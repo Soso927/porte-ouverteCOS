@@ -1,0 +1,94 @@
+/* * {
+    margin : 0;
+    padding: 0;
+} */
+
+/* Mise en place du background */
+body {
+    background-image: url(Tendance\ devs.jpg);
+    background-size: cover;
+}
+
+/* Mise en place du parent pour contenir les 2 colonnes en display grid */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+/* 1ére colonne */
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-color: #1f1f1f98;
+    border: white solid 1px;
+    width: 30%;
+    padding: 10px;
+}
+
+/* 2iém colonne */
+.two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    background-color: #1f1f1f98;
+    border: white solid 1px;
+    width: 80%;
+}
+
+/* 3iém colonne en dessous de la 1ére */
+/* Style du titre Métier */
+h1 {
+    font-size: 1.5em;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    text-decoration: underline solid 1px white;
+}
+
+.h2a {
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+p {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.text {
+    font-size: 1em;
+}
+
+a,
+.source {
+    text-align: left;
+    color: white;
+    margin-left: 10px;
+}
+
+em {
+    color: white;
+    text-decoration: white underline 1px;
+}
+
+.indice {
+    margin-top: -15px;
+}
+
+@media screen and (max-width: 560px) {
+    body {
+        background-image: url(Tendance\ devs.jpg);
+        background-size: cover;
+    }
+}
