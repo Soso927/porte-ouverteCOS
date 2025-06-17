@@ -8,16 +8,14 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: belwe-std;
+    background-image: url("../../public/assets/plateau.png");
+    height: 100%;
 }
 
 button{
     cursor: pointer;
 }
 
-main{
-    background-image: url("../../public/assets/plateau.png");
-    height: 100%;
-}
 
 /* retour a l'acceuil */
 .go-home{
