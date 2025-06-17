@@ -20,7 +20,7 @@
 </head>
 <body>
   <header id="defilement_header">
-    <a href="../../index.html" class="button lightwave"><span>Accueil</span></a>
+    <a href="#ancrePresent" class="button lightwave"><span>Accueil</span></a>
     <a href="#ancreLieux" class="button lightwave"><span>Lieux</span></a>
     <a href="#ancreContact" class="button lightwave"><span>Contact</span></a>
   </header>
@@ -51,10 +51,23 @@
     </section>
 
     <section class="contact section-transparente" id="ancreContact">
-      <h1>Contactez-moi</h1>
-      <p>Pour tout renseignement, n'hésitez pas à me contacter :</p>
-      <p>Tél : <a href="tel:0606060606">0606060606</a></p>
-      <p>Mail : <a href="mailto:blancheSTE@test.fr">blancheSTE@test.fr</a></p>
+      <div>
+        <h1>Contactez-moi</h1>
+        <p>Pour tout renseignement, n'hésitez pas à me contacter :</p>
+        <p>Tél : <a href="tel:0606060606">0606060606</a></p>
+        <p>Mail : <a href="mailto:blancheSTE@test.fr">blancheSTE@test.fr</a></p>
+      </div>
+      <div>
+        <button popovertarget="my-popover" id="boutton_pop">laisser nous un message</button>
+        <div id="my-popover" popover>
+          <label for="texte">écrivez nous</label>
+          <!-- <input type="text" name="texte"> -->
+          <textarea name="texte" rows="5" cols="30" placeholder="Écrivez votre message ici..."></textarea>
+
+
+          <!-- <input type="text" name="texte"> -->
+        </div>
+      </div>
     </section>
   </main>
 
