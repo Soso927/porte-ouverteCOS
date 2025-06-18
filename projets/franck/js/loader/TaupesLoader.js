@@ -22,7 +22,7 @@ export class TaupesLoader {
   // --------------------------------------------------------------------------------------------
   static async getSonAuditif(holes, index) {
     try {
-      const response = await fetch("../data/sons_auditifs.json");
+      const response = await fetch("../franck/data/sons_auditifs.json");
       const data = await response.json();
 
       const holesKey = holes.toString();

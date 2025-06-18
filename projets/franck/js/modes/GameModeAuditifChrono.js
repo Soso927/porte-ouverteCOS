@@ -102,7 +102,7 @@ if (isCorrect) {
 } else {
   this.miss++;
   UIManager.mettreAJourMissP1(this.miss);
-  AudioManager.playEffectWrongHole();
+  AudioManager.playEffectLose();
 }
 
   // Pause avant rentrée

@@ -60,7 +60,7 @@ export const GameConfig = {
     Battle: [8, 10, 12, 14, 18],
   },
   
-auditif: {
+auditifChrono: {
   rookie: 1000,
   easy: 800,
   killer: 500,
