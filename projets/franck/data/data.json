@@ -1,0 +1,244 @@
+{
+  "effetBim": {
+    "id": 1,
+    "name": "EffetBim",
+    "image": "../franck/images/accessoires/bimTaupe.png"
+  },
+  "joueur": {
+    "id": 1,
+    "name": "moiJardinier",
+    "image": "moi.png"
+  },
+  "taupes": [
+    {
+      "id": 1,
+      "name": "taupe",
+      "image": "../franck/images/taupes/taupe.png",
+      "intro": "taupeSolo sort discrètement : 'Pas besoin d’équipe pour envahir ce coin…'",
+      "defaite": "taupeSolo lâche : 'Je suis mieux seul… surtout ailleurs !'",
+      "victoire": "taupeSolo murmure : 'Un coup, un trou, une victoire.'",
+      "reponse": {
+        "idrep": 16,
+        "texte": "Moi : 'T’es peut-être solo mais t’es pas discret, retour trou n°1 !'"
+      }
+    },
+    {
+      "id": 2,
+      "name": "astroTaupe",
+      "image": "../franck/images/taupes/astronaute.png",
+      "intro": "astroTaupe atterrit en soucoupe : 'Mission : conquérir le jardin terrien !'",
+      "defaite": "astroTaupe rigole : 'Ahah, erreur de calcul humaine détectée !'",
+      "victoire": "astroTaupe s'éjecte : 'On se revoit sur la constellation du compost !'",
+      "reponse": {
+        "idrep": 2,
+        "texte": "Moi : 'Ici c’est pas la NASA, dégage de mon gazon intergalactique !'"
+      }
+    },
+    {
+      "id": 3,
+      "name": "chefTaupe",
+      "image": "../franck/images/taupes/cuisinier.png",
+      "intro": "chefTaupe hurle : 'Tout le monde en position ! Ce gazon est notre QG !'",
+      "defaite": "chefTaupe beugle : 'Vous êtes virés, bande d’incapables !'",
+      "victoire": "chefTaupe crache : 'Je veux ton tablier, jardinier !'",
+      "reponse": {
+        "idrep": 3,
+        "texte": "Moi : 'Descends d’un ton, mini-général ! Ici c’est moi le chef de la pelouse !'"
+      }
+    },
+    {
+      "id": 4,
+      "name": "copTaupe",
+      "image": "../franck/images/taupes/police.png",
+      "intro": "copTaupe braille : 'Police du gazon ! Ce carré est désormais sous enquête !'",
+      "defaite": "copTaupe grogne : 'Interpellation ratée... mais ce n’est que partie remise !'",
+      "victoire": "copTaupe siffle : 'Vous êtes en état d’échec horticole !'",
+      "reponse": {
+        "idrep": 4,
+        "texte": "Moi : 'Tu veux mon compost ou un PV ? Allez circule taupe de la brigade verte !'"
+      }
+    },
+    {
+      "id": 5,
+      "name": "femmeTaupe",
+      "image": "../franck/images/taupes/maman.png",
+      "intro": "femmeTaupe surgit : 'Pas touche à ma haie fleurie chéri !'",
+      "defaite": "femmeTaupe rouspète : 'Toujours les mêmes qui gâchent tout !'",
+      "victoire": "femmeTaupe rit : 'Tu ne peux rien contre le glamour de la taupe attitude !'",
+      "reponse": {
+        "idrep": 5,
+        "texte": "Moi : 'Glamour ou pas, ton brushing va finir sous la tondeuse !'"
+      }
+    },
+    {
+      "id": 6,
+      "name": "filleTaupe",
+      "image": "../franck/images/taupes/fille.png",
+      "intro": "filleTaupe s’énerve : 'Ce jardin est mon nouveau terrain de selfie !'",
+      "defaite": "filleTaupe pleurniche : 'Mais j’avais pas activé le bon filtre !'",
+      "victoire": "filleTaupe dit : 'Encore une victoire pour la génération Z taupe !'",
+      "reponse": {
+        "idrep": 6,
+        "texte": "Moi : 'Retourne sur TaupeTok, ici c’est gazon et baston !'"
+      }
+    },
+    {
+      "id": 7,
+      "name": "garconTaupe",
+      "image": "../franck/images/taupes/garcon.png",
+      "intro": "garconTaupe rigole : 'Trop cool ce terrain, je vais y creuser un skatepark !'",
+      "defaite": "garconTaupe râle : 'T’es relou, je peux même pas creuser tranquille !'",
+      "victoire": "garconTaupe crie : 'J’ai battu le vieux !'",
+      "reponse": {
+        "idrep": 7,
+        "texte": "Moi : 'Tu vas voir le coup de râteau, p’tit rebelle de sous-sol !'"
+      }
+    },
+    {
+      "id": 8,
+      "name": "magicTaupe",
+      "image": "../franck/images/taupes/sorcier.png",
+      "intro": "magicTaupe apparaît dans un nuage : 'Abracadatraaa ! Ce gazon est ensorcelé !'",
+      "defaite": "magicTaupe marmonne : 'Mon sort a foiré... je l’avais mal lu !'",
+      "victoire": "magicTaupe éclate : 'Pouf ! Plus de jardinier !'",
+      "reponse": {
+        "idrep": 8,
+        "texte": "Moi : 'AbracadaSTOP ! Retourne dans ton terrier enchanté !'"
+      }
+    },
+    {
+      "id": 9,
+      "name": "menageTaupe",
+      "image": "../franck/images/taupes/menage.png",
+      "intro": "menageTaupe frotte déjà : 'Ce gazon a besoin d’un sérieux décrassage !'",
+      "defaite": "menageTaupe grince : 'Tu laisses des traces de bottes partout !'",
+      "victoire": "menageTaupe nettoie : 'Voilà, c’est propre... plus de jardinier !'",
+      "reponse": {
+        "idrep": 9,
+        "texte": "Moi : 'Range ton balai, c’est pas ici la station de compostage !'"
+      }
+    },
+    {
+      "id": 10,
+      "name": "mineureTaupe",
+      "image": "../franck/images/taupes/mineur.png",
+      "intro": "mineureTaupe débarque avec une pioche : 'Je cherche du gazon précieux !'",
+      "defaite": "mineureTaupe soupire : 'Trop dur ce terrain... je change de gisement !'",
+      "victoire": "mineureTaupe crie : 'Strike ! Encore une veine de victoire !'",
+      "reponse": {
+        "idrep": 10,
+        "texte": "Moi : 'Va creuser à TaupeCraft, ici c’est propriété privée !'"
+      }
+    },
+    {
+      "id": 11,
+      "name": "musicTaupe",
+      "image": "../franck/images/taupes/guitard.png",
+      "intro": "musicTaupe lance un beat : 'Ce terrain est ma nouvelle scène !'",
+      "defaite": "musicTaupe râle : 'T’as cassé mon groove !'",
+      "victoire": "musicTaupe s’exclame : 'TCHAK BOUM ! DJ Taupe a tout retourné !'",
+      "reponse": {
+        "idrep": 11,
+        "texte": "Moi : 'Ton micro est coupé, DJ, va faire trembler une autre pelouse !'"
+      }
+    },
+    {
+      "id": 12,
+      "name": "pirateTaupe",
+      "image": "../franck/images/taupes/pirate.png",
+      "intro": "pirateTaupe hurle : 'À l’abordage du potager !'",
+      "defaite": "pirateTaupe crache : 'Par tous les vers de terre !'",
+      "victoire": "pirateTaupe rit : 'Ce jardin est mon trésor maintenant !'",
+      "reponse": {
+        "idrep": 12,
+        "texte": "Moi : 'Retourne sur ton navire de compost, flibustier de taupinière !'"
+      }
+    },
+    {
+      "id": 13,
+      "name": "pompierTaupe",
+      "image": "../franck/images/taupes/pompier.png",
+      "intro": "pompierTaupe hurle : 'Y’a le feu dans tes tomates ! J’interviens !'",
+      "defaite": "pompierTaupe râle : 'Même pas eu le temps de sortir la lance…'",
+      "victoire": "pompierTaupe clame : 'Intervention réussie, jardin neutralisé !'",
+      "reponse": {
+        "idrep": 13,
+        "texte": "Moi : 'C’est mon arrosoir ici, pas besoin de ton extincteur à taupe !'"
+      }
+    },
+    {
+      "id": 14,
+      "name": "profTaupe",
+      "image": "../franck/images/taupes/prof.png",
+      "intro": "proTaupe arrive : 'Laisse faire les pros, amateur du gazon !'",
+      "defaite": "proTaupe maugrée : 'Pas assez de budget pour cette opération…'",
+      "victoire": "proTaupe sourit : 'C’est signé : victoire, cachet, et rideau !'",
+      "reponse": {
+        "idrep": 14,
+        "texte": "Moi : 'Pro de quoi ? T’as creusé droit dans mon tuyau d’arrosage !'"
+      }
+    },
+    {
+      "id": 15,
+      "name": "serveurTaupe",
+      "image": "../franck/images/taupes/serveur.png",
+      "intro": "serveurTaupe tend un menu : 'Aujourd’hui : plat du jour sur gazon moelleux !'",
+      "defaite": "serveurTaupe peste : 'Même pas un pourboire pour la taupe !'",
+      "victoire": "serveurTaupe annonce : 'La maison vous offre votre défaite !'",
+      "reponse": {
+        "idrep": 15,
+        "texte": "Moi : 'Repas annulé, service fermé, retourne à ton bistrot souterrain !'"
+      }
+    },
+    {
+      "id": 16,
+      "name": "artisteTaupe",
+      "image": "../franck/images/taupes/peintre.png",
+      "intro": "L'artisteTaupe surgit avec un pinceau : 'Je vais redécorer ce gazon à ma façon !'",
+      "defaite": "artisteTaupe balance : 'Pff, t'as aucun goût !'",
+      "victoire": "artisteTaupe gémit : 'Pas touche à mon chef-d'œuvre de taupe !'",
+      "reponse": {
+        "idrep": 1,
+        "texte": "Moi : 'Tes œuvres, c’est que du gribouillis de terrier, va peindre ailleurs !'"
+      }
+    },
+    {
+      "id": 17,
+      "name": "victoire",
+      "image": "../franck/images/taupes/victoire.png",
+      "intro": "victoireTaupe surgit victorieuse : 'Ce royaume est a moi  !'",
+      "defaite": "victoireTaupe balance : 'je suis le patron!'",
+      "victoire": "victoireTaupe gémit : 'I am the king !'",
+      "reponse": {
+        "idrep": 1,
+        "texte": "Moi : 'les rois ne sont pas invincible!'"
+      }
+    },
+    {
+      "id": 18,
+      "name": "defaite",
+      "image": "../franck/images/taupes/defaite.png",
+      "intro": "L'artisteTaupe surgit avec un air triste : 'La pouasse !'",
+      "defaite": "artisteTaupe balance : 'j'ai pas de chance!'",
+      "victoire": "artisteTaupe gémit : 'la partie n'est pas terminée !'",
+      "reponse": {
+        "idrep": 1,
+        "texte": "Moi : 'C'est qui le boss !'"
+      }
+    },
+    {
+      "id": 19,
+      "name": "choc",
+      "image": "../franck/images/taupes/choc.png",
+      "intro": "L'chocTaupe vien de prendre un coup: 'Aie je vais me vanger !'",
+      "defaite": "chocTaupe balance : 'Pff, si j'avais su j'aurais été chez le viosin !'",
+      "victoire": "chocTaupe gémit : 'je suis plus fort que ton marteau!'",
+      "reponse": {
+        "idrep": 1,
+        "texte": "Moi : 'Tien tu la pas volé celle la !'"
+      }
+    }
+  ]
+}
+
+  

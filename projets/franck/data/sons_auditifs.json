@@ -1,0 +1,20 @@
+{
+    "auditif": {
+    "4": {
+      "0": "./sounds/avant.mp3",
+      "1": "./sounds/gauche.mp3",
+      "2": "./sounds/droite.mp3",
+      "3": "./sounds/arriere.mp3"
+    },
+    "8": {
+      "0": "./sounds/pure/avant-gauche.mp3",
+      "1": "./sounds/avant.mp3",
+      "2": "./sounds/pure/avant-droite.mp3",
+      "3": "./sounds/gauche.mp3",
+      "4": "./sounds/droite.mp3",
+      "5": "./sounds/pure/arriere-gauche.mp3",
+      "6": "./sounds/arriere.mp3",
+      "7": "./sounds/pure/arriere-droite.mp3"
+    }
+  }
+}

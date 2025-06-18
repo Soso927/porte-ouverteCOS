@@ -1,14 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <title>COS 2025 - Page principale</title>
-</head>
-<body>
-
+<html lang="fr">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu de Taupe</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+  
+  <body>
+  <div class="contenu">
+    <!-- logo retour Accueil -->
+    <a class="go-home" href="../../index.html">
+        <svg width="50px" height="50px" fill="bisque" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+    </a>
+    <audio id="musiqueIntro" src="./audioMp3/accueil.mp3" loop></audio>
+    <img class="imgAcceuil" src="images/decors/page-acceuille.PNG" alt="pageAcceuil" />
+    <img class="imgDecors" src="images/decors/decors.PNG" alt="decors" />
+    <div id="secretMenu">
+      <h2>Réglages Secrets</h2>
+      <label>Volume:</label>
+      <input type="range" min="0" max="1" step="0.01" id="volumeControl" value="0.8" />
+      <h3>Durée de descente</h3>
+      <input type="number" id="dureeDescente" value="500" step="50" /><br />
+      <h3>Durées apparition</h3>
+      Rookie: <input type="number" id="apparitionRookie" value="1500" /><br />
+      Easy: <input type="number" id="apparitionEasy" value="1000" /><br />
+      Killer: <input type="number" id="apparitionKiller" value="600" /><br />
+      <h3>Durées chronos</h3>
+      Rookie: <input type="number" id="chronoRookie" value="90" /><br />
+      Easy: <input type="number" id="chronoEasy" value="60" /><br />
+      Killer: <input type="number" id="chronoKiller" value="30" /><br />
+      <button id="btnTestAuditif">🎧 Tester sons auditifs</button>
+      <button id="btnEnregistrer">Enregistrer</button>
+    </div>
+    <div class="titre">
+      <h1 class="titleGame pulsation">Glory Holes</h1>
+      <h2 class="sousTitleGame pulsation">Moles war</h2>
+      <!-- <h1 class="titleGame">Glory Moles</h1>
+      <h2 class="sousTitleGame">Holes war</h2> -->
+    </div>
     
+    <div class="controls">
+      <div id="soundMute">
+        <button id="muteBtn">🔊</button>
+      </div>
+      <label id="menuType" class="labelMenu">
+        Type de jeu :
+        <select name="gameType" id="gameType" class="gameParam">
+          <option value="Reflexe" selected>Reflexe</option>
+          <option value="Memoire">Memoire</option>
+          <option value="Auditif">Auditif</option>
+          <option value="Battle">Battle</option>
+        </select>
+      </label>
+      <label id="menuMode" class="labelMenu">
+        Mode de jeu :
+        <select name="gameMode" id="gameMode" class="gameParam">
+          <option id="ChronoSelect" value="Chrono" selected>Chrono</option>
+          <option id="AssautSelect" value="Assaut">Assaut</option>
+          <option id="EnduranceSelect" value="Endurance">Endurance</option>
+        </select>
+      </label>
+      <label id="menuDifficulty" class="labelMenu">
+        Difficulté :
+        <select name="gameDifficulty" id="gameDifficulty" class="gameParam">
+          <option value="rookie" selected>Rookie</option>
+          <option value="easy">Easy</option>
+          <option value="killer">Killer</option>
+        </select>
+      </label>
+      <label id="menuHoles" class="labelMenu">
+        Trous :
+        <select id="holesNumber" class="gameParam"></select>
+      </label>
+      <button id="startBtn" class="startBtn">Démarrer</button>
+    </div>
+    <div id="game" class="grid-9"></div>
+    <div id="viewGameParamPlayer1">
+      <img src="./images/perso-principale/player1.png" alt="player1" />
+      <span id="totalP1" class="totalP1"></span>
+      <span id="touchP1" class="touchP1"></span>
+      <span id="findP1" class="findP1"></span>
+      <span id="missP1" class="missP1"></span>
+    </div>
+    <div id="annonce-assaut" class="messageAssaut"></div>
+    <div id="testSound" class="message">test sons of holes</div>
+    <div id="messageTemp" class="message"></div>
+    <div id="chrono"></div>
+    <div id="message" class="message">
+      <div id="internMessage"></div>
+      <button id="again">Rejouer</button>
+      <button id="acceuil">Acceuil</button>
+    </div>
+    <div id="viewGameParamPlayer2">
+      <img src="./images/perso-principale/player2.png" alt="player2" />
+      <span id="touchP2" class="touchP2"></span>
+      <span id="findP2" class="findP2"></span>
+      <span id="missP2" class="missP2"></span>
+    </div>
+    <button class="exit">X</button>
+  </div>
 </body>
+
 </html>
