@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <title>COS 2025 - Page principale</title>
+  <meta charset="UTF-8">
+  <title>La Quête du Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Lien vers la feuille de style -->
+  <link rel="stylesheet" href="./src/css/style.css">
+  <!-- Lien vers le script JS -->
+  <script src="./src/JS/logique.js" defer></script>
 </head>
 <body>
 
-    
+  <header>
+    <h1>La conquête du code</h1>
+    <p>Promis, ce n'est pas de la piraterie... juste une quête épique pour ton savoir !</p>
+    <div id="choix-theme">
+      <button data-theme="dev">Développement</button>
+      <button data-theme="bienveillance">Bienveillance</button>
+      <button data-theme="humour">Humour</button>
+    </div>
+  </header>
+
+  <main id="quiz-container">
+    <div class="question">
+      <h2 id="question">Clique sur un thème pour commencer !</h2>
+      <ul id="answers"></ul>
+      <p id="feedback"></p>
+    </div>
+  </main>
+
+  <footer>
+    Projet réalisé par Esther & Sofiane - La Quête du Code - 2025
+  </footer>
+
 </body>
 </html>

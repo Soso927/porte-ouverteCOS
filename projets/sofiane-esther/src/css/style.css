@@ -1,0 +1,101 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Rouge+Script&display=swap');
+
+/* Variables */
+:root {
+  --vert-fonce: #006400;
+  --bleu-nuit: #191970;
+  --blanc: #FFFFFF;
+  --dore: #B3A500;
+  --font-titre: 'Rouge Script', cursive;
+  --font-contenu: 'DynaPuff', cursive;
+}
+
+/* Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-contenu);
+  background-color: var(--bleu-nuit);
+  color: var(--blanc);
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-titre);
+  font-size: 3rem;
+  color: var(--dore);
+}
+
+header {
+  background-color: var(--vert-fonce);
+  padding: 1rem;
+  border-bottom: 3px solid var(--dore);
+}
+
+header p {
+  margin-top: 0.5rem;
+}
+
+#choix-theme {
+  margin-top: 1rem;
+}
+
+#choix-theme button {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--dore);
+  color: var(--bleu-nuit);
+  cursor: pointer;
+}
+
+#choix-theme button:hover {
+  transform: scale(1.05);
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.question {
+  background-color: var(--vert-fonce);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid var(--dore);
+  box-shadow: 0 0 15px var(--dore);
+}
+
+#answers {
+  list-style: none;
+  padding: 0;
+}
+
+#answers li {
+  background-color: var(--bleu-nuit);
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border: 2px solid var(--blanc);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#answers li:hover {
+  background-color: var(--vert-fonce);
+}
+
+#feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--bleu-nuit);
+  border-top: 1px solid var(--dore);
+  color: var(--dore);
+}
